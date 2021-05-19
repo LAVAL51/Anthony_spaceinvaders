@@ -1,13 +1,6 @@
 package spaceinvaders;
 
-import moteurDuJeu.Commande;
-
-public class Vaisseau{
-
-   private Position origine;
-   private Dimension dimension;
-   private int vitesse;
-
+public class Vaisseau extends Sprite{
 
    public Vaisseau(int longueur, int hauteur) {
 	    this(longueur, hauteur, 0, 0);
@@ -18,75 +11,11 @@ public class Vaisseau{
    }
 
 	public Vaisseau(Dimension dimension, Position positionOrigine, int vitesse) {
-		this.dimension = dimension;
-		this.origine = positionOrigine;
-		this.vitesse = vitesse;
+		super(dimension, positionOrigine, vitesse);
 	}
 
 	public Vaisseau(Dimension dimension, Position positionOrigine) {
 		this(dimension, positionOrigine, 1);
-	}
-
-   public boolean occupeLaPosition(int x, int y) {
-	    return estAbscisseCouverte(x) && estOrdonneeCouverte(y);
-   }
-
-   private boolean estOrdonneeCouverte(int y) {
-	   return (ordonneeLaPlusBasse() <= y) && (y <= ordonneeLaPlusHaute());
-   }
-
-   private boolean estAbscisseCouverte(int x) {
-	   return (abscisseLaPlusAGauche() <= x) && (x <= abscisseLaPlusADroite());
-   }
-
-   public int ordonneeLaPlusBasse() {
-	    return this.origine.ordonnee() - this.dimension.hauteur() + 1;
-   }
-
-   public int ordonneeLaPlusHaute() {
-	   return this.origine.ordonnee();
-  }
-
-  public int abscisseLaPlusADroite() {
-	   return this.origine.abscisse() + this.dimension.longueur() - 1;
-  }
-
-  public int abscisseLaPlusAGauche() {
-	   return this.origine.abscisse();
-  }
-
-  public void seDeplacerVersLaDroite() {
-		this.origine.changerAbscisse(this.origine.abscisse() + vitesse);
-	}
-  
-  public void seDeplacerVersLaGauche() {
-		this.origine.changerAbscisse(this.origine.abscisse() - vitesse);
-	}
-
-  public void positionner(int x, int y) {
-	   this.origine.changerAbscisse(x);
-	   this.origine.changerOrdonnee(y);
-  }
-  
-  public int longueur() {
-		return dimension.longueur;
-	}
-  
-	public void deplacer(Commande c) {
-		
-		if (c.gauche)
-		{
-			this.seDeplacerVersLaGauche();
-		}
-
-		if (c.droite)
-		{
-			this.seDeplacerVersLaDroite();
-		}
-	}
-
-	public int hauteur() {
-		return dimension.hauteur;
 	}
 
 }
