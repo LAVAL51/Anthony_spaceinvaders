@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/spaceinvaders/src" modelPluginID="spaceinvaders"
+    modelName="Spaceinvaders2" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="EMPTY_ROOT_PACKAGES" value="DISCARD"/>
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURES" value="PROCESS"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="ECORE_BASE_TYPES" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="PROCESS"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATIONS" value="REPORT"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="OPERATION_BODIES" value="PROCESS"/>
+    <details key="UNTYPED_PROPERTIES" value="REPORT"/>
+    <details key="REDEFINING_PROPERTIES" value="PROCESS"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="IGNORE"/>
+    <details key="UNION_PROPERTIES" value="PROCESS"/>
+    <details key="SUBSETTING_PROPERTIES" value="PROCESS"/>
+    <details key="ECORE_DATA_TYPES" value="IGNORE"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+  </genAnnotations>
+  <foreignModel>spaceinvaders2.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Utils" disposableProviderFactory="true"
+      ecorePackage="utils.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="utils.ecore#//DebordementEspaceJeuException">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="utils.ecore#//DebordementEspaceJeuException/DebordementEspaceJeuException">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="utils.ecore#//DebordementEspaceJeuException/DebordementEspaceJeuException/message"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="utils.ecore#//DebordementEspaceJeuException_DebordementEspaceJeuException"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="utils.ecore#//HorsEspaceJeuException">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="utils.ecore#//HorsEspaceJeuException/HorsEspaceJeuException">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="utils.ecore#//HorsEspaceJeuException/HorsEspaceJeuException/message"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="utils.ecore#//HorsEspaceJeuException_HorsEspaceJeuException"/>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Lang" basePackage="jdk.java"
+      disposableProviderFactory="true" ecorePackage="lang.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="lang.ecore#//RuntimeException"/>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Spaceinvaders" disposableProviderFactory="true"
+      ecorePackage="spaceinvaders.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpacesInvaders">
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//SpacesInvaders/MARQUE_FIN_LIGNE"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//SpacesInvaders/MARQUE_VIDE"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//SpacesInvaders/MARQUE_VAISSEAU"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//SpacesInvaders/longueur"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//SpacesInvaders/hauteur"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference spaceinvaders.ecore#//SpacesInvaders/vaisseau"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpacesInvaders/SpacesInvaders">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/SpacesInvaders/longueur"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/SpacesInvaders/hauteur"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpacesInvaders/recupererEspaceJeuDansChaineASCII"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpacesInvaders/recupererMarqueDeLaPosition">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/recupererMarqueDeLaPosition/y"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpacesInvaders/aUnVaisseauQuiOccupeLaPosition">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/aUnVaisseauQuiOccupeLaPosition/x"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/aUnVaisseauQuiOccupeLaPosition/y"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpacesInvaders/aUnVaisseau"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpacesInvaders/estDansEspaceJeu">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/estDansEspaceJeu/x"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/estDansEspaceJeu/y"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpacesInvaders/deplacerVaisseauVersLaDroite"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpacesInvaders/deplacerVaisseauVersLaGauche"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpacesInvaders/positionnerUnNouveauVaisseau">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/positionnerUnNouveauVaisseau/longueur"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/positionnerUnNouveauVaisseau/hauteur"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/positionnerUnNouveauVaisseau/x"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/positionnerUnNouveauVaisseau/y"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpacesInvaders/positionnerUnNouveauVaisseau.1">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/positionnerUnNouveauVaisseau.1/dimension"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/positionnerUnNouveauVaisseau.1/position"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//SpacesInvaders/positionnerUnNouveauVaisseau.1/vitesse"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference spaceinvaders.ecore#//Vaisseau/origine"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference spaceinvaders.ecore#//Vaisseau/dimension"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Vaisseau/vitesse"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/Vaisseau">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/Vaisseau/longueur"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/Vaisseau/hauteur"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/Vaisseau.1">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/Vaisseau.1/longueur"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/Vaisseau.1/hauteur"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/Vaisseau.1/x"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/Vaisseau.1/y"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/occupeLaPosition">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/occupeLaPosition/x"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/occupeLaPosition/y"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/estOrdonneeCouverte">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/estOrdonneeCouverte/y"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/estAbscisseCouverte">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/estAbscisseCouverte/x"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/ordonneeLaPlusBasse"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/ordonneeLaPlusHaute"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/abscisseLaPlusADroite"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/abscisseLaPlusAGauche"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/seDeplacerVersLaDroite"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/seDeplacerVersLaGauche"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/positionner">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/positionner/x"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/positionner/y"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/longueur"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/Vaisseau.2">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/Vaisseau.2/dimension"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/Vaisseau.2/positionOrigine"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/Vaisseau.2/vitesse"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Vaisseau/Vaisseau.3">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/Vaisseau.3/dimension"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Vaisseau/Vaisseau.3/positionOrigine"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Position">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Position/x"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Position/y"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Position/Position">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Position/Position/x"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Position/Position/y"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Position/abscisse"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Position/ordonnee"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Position/changerAbscisse">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Position/changerAbscisse/nouvelleAbscisse"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Position/changerOrdonnee">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Position/changerOrdonnee/nouvelleOrdonnee"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Position_Position"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Position_abscisse"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Position_ordonnee"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Position_changerAbscisse"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Position_changerOrdonnee"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Dimension">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Dimension/longueur.1"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Dimension/hauteur.1"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Dimension/Dimension">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Dimension/Dimension/longueur"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Dimension/Dimension/hauteur"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Dimension/longueur"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Dimension/hauteur"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Dimension_Dimension"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Dimension_longueur"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Dimension_hauteur"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_Vaisseau"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_Vaisseau.1"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_Vaisseau.2"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_Vaisseau.3"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_occupeLaPosition"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_estOrdonneeCouverte"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_estAbscisseCouverte"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_ordonneeLaPlusBasse"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_ordonneeLaPlusHaute"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_abscisseLaPlusADroite"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_abscisseLaPlusAGauche"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_seDeplacerVersLaDroite"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_seDeplacerVersLaGauche"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_positionner"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Vaisseau_longueur"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpacesInvaders_SpacesInvaders"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpacesInvaders_recupererEspaceJeuDansChaineASCII"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpacesInvaders_recupererMarqueDeLaPosition"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpacesInvaders_aUnVaisseauQuiOccupeLaPosition"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpacesInvaders_aUnVaisseau"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpacesInvaders_estDansEspaceJeu"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpacesInvaders_deplacerVaisseauVersLaDroite"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpacesInvaders_deplacerVaisseauVersLaGauche"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpacesInvaders_positionnerUnNouveauVaisseau"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpacesInvaders_positionnerUnNouveauVaisseau.1"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference spaceinvaders.ecore#//SpaceInvaderTest/spaceinvaders"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpaceInvaderTest/initialisation"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpaceInvaderTest/test_AuDebut_JeuSpaceInvaderEstVide"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpaceInvaderTest/test_unNouveauVaisseauEstCorrectementPositionneDansEspaceJeu"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpaceInvaderTest/test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpaceInvaderTest/test_unNouveauVaisseauAvecDimensionEstCorrectementPositionneDansEspaceJeu"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpaceInvaderTest/test_UnNouveauVaisseauPositionneDansEspaceJeuMaisAvecDimensionTropGrande_DoitLeverUneExceptionDeDebordement"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpaceInvaderTest/VaisseauAvance_DeplacerVaisseauVersLaGauche"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpaceInvaderTest/VaisseauImmobile_DeplacerVaisseauVersLaGauche"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpaceInvaderTest/test_VaisseauAvance_DeplacerVaisseauVersLaDroite"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpaceInvaderTest/test_VaisseauImmobile_DeplacerVaisseauVersLaDroite"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//SpaceInvaderTest/test_VaisseauAvancePartiellement_DeplacerVaisseauVersLaDroite"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_initialisation"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_test_AuDebut_JeuSpaceInvaderEstVide"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_test_unNouveauVaisseauEstCorrectementPositionneDansEspaceJeu"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_test_unNouveauVaisseauAvecDimensionEstCorrectementPositionneDansEspaceJeu"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_test_UnNouveauVaisseauPositionneDansEspaceJeuMaisAvecDimensionTropGrande_DoitLeverUneExceptionDeDebordement"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_VaisseauAvance_DeplacerVaisseauVersLaGauche"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_VaisseauImmobile_DeplacerVaisseauVersLaGauche"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_test_VaisseauAvance_DeplacerVaisseauVersLaDroite"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_test_VaisseauImmobile_DeplacerVaisseauVersLaDroite"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_test_VaisseauAvancePartiellement_DeplacerVaisseauVersLaDroite"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//NewClass1"/>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Junit" basePackage="org" disposableProviderFactory="true"
+      ecorePackage="junit.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="junit.ecore#//Assert"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="junit.ecore#//Test"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="junit.ecore#//Before"/>
+  </genPackages>
+</genmodel:GenModel>

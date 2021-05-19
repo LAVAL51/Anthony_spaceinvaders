@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="utils" nsURI="http:///spaceinvaders2/utils.ecore" nsPrefix="spaceinvaders2.utils">
+  <eClassifiers xsi:type="ecore:EClass" name="DebordementEspaceJeuException" eSuperTypes="lang.ecore#//RuntimeException">
+    <eOperations name="DebordementEspaceJeuException" ordered="false" lowerBound="1"
+        eType="#//DebordementEspaceJeuException">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="super(message);&#xD;&#xA; "/>
+      </eAnnotations>
+      <eParameters name="message" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DebordementEspaceJeuException_DebordementEspaceJeuException">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="DebordementEspaceJeuException"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HorsEspaceJeuException" eSuperTypes="lang.ecore#//RuntimeException">
+    <eOperations name="HorsEspaceJeuException" ordered="false" lowerBound="1" eType="#//HorsEspaceJeuException">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="super(message);&#xD;&#xA; "/>
+      </eAnnotations>
+      <eParameters name="message" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HorsEspaceJeuException_HorsEspaceJeuException">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="HorsEspaceJeuException"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

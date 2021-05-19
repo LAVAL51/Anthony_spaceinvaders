@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="spaceinvaders" nsURI="http:///spaceinvaders2/spaceinvaders.ecore"
+    nsPrefix="spaceinvaders2.spaceinvaders">
+  <eClassifiers xsi:type="ecore:EClass" name="SpacesInvaders">
+    <eOperations name="SpacesInvaders" ordered="false" lowerBound="1" eType="#//SpacesInvaders">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this.longueur = longueur;&#xD;&#xA;&#x9;   this.hauteur = hauteur;&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="longueur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="hauteur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="recupererEspaceJeuDansChaineASCII" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="StringBuilder espaceDeJeu = new StringBuilder();&#xD;&#xA;&#x9;&#x9;for (int y = 0; y &lt; hauteur; y++) {&#xD;&#xA;&#x9;&#x9;&#x9;for (int x = 0; x &lt; longueur; x++) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;espaceDeJeu.append(recupererMarqueDeLaPosition(x, y));&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;espaceDeJeu.append(MARQUE_FIN_LIGNE);&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return espaceDeJeu.toString();&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="recupererMarqueDeLaPosition" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EChar">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="char marque;&#xD;&#xA;&#x9;&#x9;if (this.aUnVaisseauQuiOccupeLaPosition(x, y))&#xD;&#xA;&#x9;&#x9;      marque=MARQUE_VAISSEAU;&#xD;&#xA;&#x9;&#x9;else&#xD;&#xA;&#x9;&#x9;      marque=MARQUE_VIDE;&#xD;&#xA;&#x9;&#x9;return marque;&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="aUnVaisseauQuiOccupeLaPosition" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return this.aUnVaisseau() &amp;&amp; vaisseau.occupeLaPosition(x, y);&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="aUnVaisseau" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return vaisseau!=null;&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="estDansEspaceJeu" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return (((x >= 0) &amp;&amp; (x &lt; longueur)) &amp;&amp; ((y >= 0) &amp;&amp; (y &lt; hauteur)));&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="deplacerVaisseauVersLaDroite" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="if (vaisseau.abscisseLaPlusADroite() &lt; (longueur - 1)) {&#xD;&#xA;&#x9;&#x9;&#x9;vaisseau.seDeplacerVersLaDroite();&#xD;&#xA;&#x9;&#x9;&#x9;if (!estDansEspaceJeu(vaisseau.abscisseLaPlusADroite(), vaisseau.ordonneeLaPlusHaute())) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;vaisseau.positionner(longueur - vaisseau.longueur(), vaisseau.ordonneeLaPlusHaute());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="deplacerVaisseauVersLaGauche" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="if (vaisseau.abscisseLaPlusAGauche()> 0) vaisseau.seDeplacerVersLaGauche();&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="positionnerUnNouveauVaisseau" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="if (!estDansEspaceJeu(x, y))&#xD;&#xA;&#x9;&#x9;&#x9;throw new HorsEspaceJeuException(&quot;La position du vaisseau est en dehors de l'espace jeu&quot;);&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if ( !estDansEspaceJeu(x+longueur-1,y))&#xD;&#xA;&#x9;&#x9;&#x9;throw new DebordementEspaceJeuException(&quot;Le vaisseau déborde de l'espace jeu vers la droite à cause de sa longueur&quot;);&#xD;&#xA;&#x9;&#x9;if (!estDansEspaceJeu(x,y-hauteur+1))&#xD;&#xA;&#x9;&#x9;&#x9;throw new DebordementEspaceJeuException(&quot;Le vaisseau déborde de l'espace jeu vers le bas à cause de sa hauteur&quot;);&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;vaisseau = new Vaisseau(longueur, hauteur);&#xD;&#xA;&#x9;&#x9;vaisseau.positionner(x, y);&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="longueur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="hauteur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="positionnerUnNouveauVaisseau" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="int x = position.abscisse();&#xD;&#xA;&#x9;&#x9;int y = position.ordonnee();&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if (!estDansEspaceJeu(x, y))&#xD;&#xA;&#x9;&#x9;&#x9;throw new HorsEspaceJeuException(&quot;La position du vaisseau est en dehors de l'espace jeu&quot;);&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;int longueurVaisseau = dimension.longueur();&#xD;&#xA;&#x9;&#x9;int hauteurVaisseau = dimension.hauteur();&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if (!estDansEspaceJeu(x + longueurVaisseau - 1, y))&#xD;&#xA;&#x9;&#x9;&#x9;throw new DebordementEspaceJeuException(&quot;Le vaisseau déborde de l'espace jeu vers la droite à cause de sa longueur&quot;);&#xD;&#xA;&#x9;&#x9;if (!estDansEspaceJeu(x, y - hauteurVaisseau + 1))&#xD;&#xA;&#x9;&#x9;&#x9;throw new DebordementEspaceJeuException(&quot;Le vaisseau déborde de l'espace jeu vers le bas à cause de sa hauteur&quot;);&#xD;&#xA;&#xD;&#xA;&#x9;    vaisseau = new Vaisseau(dimension,position,vitesse);&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="dimension" ordered="false" lowerBound="1" eType="#//Dimension"/>
+      <eParameters name="position" ordered="false" lowerBound="1" eType="#//Position"/>
+      <eParameters name="vitesse" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MARQUE_FIN_LIGNE" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EChar"
+        changeable="false" defaultValueLiteral="'\n'"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MARQUE_VIDE" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EChar"
+        changeable="false" defaultValueLiteral="'.'"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MARQUE_VAISSEAU" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EChar"
+        changeable="false" defaultValueLiteral="'V'"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longueur" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hauteur" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vaisseau" ordered="false"
+        lowerBound="1" eType="#//Vaisseau"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau">
+    <eOperations name="Vaisseau" ordered="false" lowerBound="1" eType="#//Vaisseau">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this(longueur, hauteur, 0, 0);&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="longueur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="hauteur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="Vaisseau" ordered="false" lowerBound="1" eType="#//Vaisseau">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this(new Dimension(longueur, hauteur), new Position(x, y));&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="longueur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="hauteur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="occupeLaPosition" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return estAbscisseCouverte(x) &amp;&amp; estOrdonneeCouverte(y);&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="estOrdonneeCouverte" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return (ordonneeLaPlusBasse() &lt;= y) &amp;&amp; (y &lt;= ordonneeLaPlusHaute());&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="estAbscisseCouverte" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return (abscisseLaPlusAGauche() &lt;= x) &amp;&amp; (x &lt;= abscisseLaPlusADroite());&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="ordonneeLaPlusBasse" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return this.origine.ordonnee() - this.dimension.hauteur() + 1;&#xD;&#xA;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="ordonneeLaPlusHaute" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return this.origine.ordonnee();&#xD;&#xA;  "/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="abscisseLaPlusADroite" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return this.origine.abscisse() + this.dimension.longueur() - 1;&#xD;&#xA;  "/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="abscisseLaPlusAGauche" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return this.origine.abscisse();&#xD;&#xA;  "/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="seDeplacerVersLaDroite" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this.origine.changerAbscisse(this.origine.abscisse() + vitesse);&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="seDeplacerVersLaGauche" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this.origine.changerAbscisse(this.origine.abscisse() - vitesse);&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="positionner" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this.origine.changerAbscisse(x);&#xD;&#xA;&#x9;   this.origine.changerOrdonnee(y);&#xD;&#xA;  "/>
+      </eAnnotations>
+      <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="longueur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return dimension.longueur;&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="Vaisseau" ordered="false" lowerBound="1" eType="#//Vaisseau">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this.dimension = dimension;&#xD;&#xA;&#x9;&#x9;this.origine = positionOrigine;&#xD;&#xA;&#x9;&#x9;this.vitesse = vitesse;&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="dimension" ordered="false" lowerBound="1" eType="#//Dimension"/>
+      <eParameters name="positionOrigine" ordered="false" lowerBound="1" eType="#//Position"/>
+      <eParameters name="vitesse" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="Vaisseau" ordered="false" lowerBound="1" eType="#//Vaisseau">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this(dimension, positionOrigine, 1);&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="dimension" ordered="false" lowerBound="1" eType="#//Dimension"/>
+      <eParameters name="positionOrigine" ordered="false" lowerBound="1" eType="#//Position"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="origine" ordered="false"
+        lowerBound="1" eType="#//Position"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dimension" ordered="false"
+        lowerBound="1" eType="#//Dimension"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vitesse" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Position">
+    <eOperations name="Position" ordered="false" lowerBound="1" eType="#//Position">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this.x = x;&#xD;&#xA;&#x9;&#x9;   this.y = y;&#xD;&#xA;&#x9;   "/>
+      </eAnnotations>
+      <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="abscisse" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return this.x;&#xD;&#xA;&#x9;   "/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="ordonnee" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return this.y;&#xD;&#xA;&#x9;  "/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="changerAbscisse" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this.x = nouvelleAbscisse;&#xD;&#xA;&#x9;   "/>
+      </eAnnotations>
+      <eParameters name="nouvelleAbscisse" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="changerOrdonnee" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this.y = nouvelleOrdonnee;&#xD;&#xA;&#x9;   "/>
+      </eAnnotations>
+      <eParameters name="nouvelleOrdonnee" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Position_Position">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Position"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Position_abscisse">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="abscisse"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Position_ordonnee">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="ordonnee"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Position_changerAbscisse">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="changerAbscisse"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Position_changerOrdonnee">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="changerOrdonnee"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dimension">
+    <eOperations name="Dimension" ordered="false" lowerBound="1" eType="#//Dimension">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this.longueur = longueur;&#xD;&#xA;&#x9;&#x9;   this.hauteur = hauteur;&#xD;&#xA;&#x9;   "/>
+      </eAnnotations>
+      <eParameters name="longueur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="hauteur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="longueur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return this.longueur;&#xD;&#xA;&#x9;   "/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="hauteur" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="return this.hauteur;&#xD;&#xA;&#x9;   "/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longueur" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hauteur" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dimension_Dimension">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Dimension"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dimension_longueur">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="longueur"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dimension_hauteur">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="hauteur"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_Vaisseau">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Vaisseau"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_Vaisseau">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Vaisseau"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_Vaisseau">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Vaisseau"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_Vaisseau">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Vaisseau"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_occupeLaPosition">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="occupeLaPosition"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_estOrdonneeCouverte">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="estOrdonneeCouverte"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_estAbscisseCouverte">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="estAbscisseCouverte"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_ordonneeLaPlusBasse">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="ordonneeLaPlusBasse"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_ordonneeLaPlusHaute">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="ordonneeLaPlusHaute"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_abscisseLaPlusADroite">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="abscisseLaPlusADroite"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_abscisseLaPlusAGauche">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="abscisseLaPlusAGauche"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_seDeplacerVersLaDroite">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="seDeplacerVersLaDroite"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_seDeplacerVersLaGauche">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="seDeplacerVersLaGauche"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_positionner">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="positionner"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vaisseau_longueur">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="longueur"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpacesInvaders_SpacesInvaders">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="SpacesInvaders"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpacesInvaders_recupererEspaceJeuDansChaineASCII">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="recupererEspaceJeuDansChaineASCII"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpacesInvaders_recupererMarqueDeLaPosition">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="recupererMarqueDeLaPosition"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpacesInvaders_aUnVaisseauQuiOccupeLaPosition">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="aUnVaisseauQuiOccupeLaPosition"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpacesInvaders_aUnVaisseau">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="aUnVaisseau"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpacesInvaders_estDansEspaceJeu">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="estDansEspaceJeu"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpacesInvaders_deplacerVaisseauVersLaDroite">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="deplacerVaisseauVersLaDroite"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpacesInvaders_deplacerVaisseauVersLaGauche">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="deplacerVaisseauVersLaGauche"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpacesInvaders_positionnerUnNouveauVaisseau">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="positionnerUnNouveauVaisseau"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpacesInvaders_positionnerUnNouveauVaisseau">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="positionnerUnNouveauVaisseau"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpaceInvaderTest">
+    <eOperations name="initialisation" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="spaceinvaders = new SpacesInvaders(15, 10);&#xD;&#xA; "/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="test_AuDebut_JeuSpaceInvaderEstVide" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="assertEquals(&quot;&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; +&#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; , spaceinvaders.recupererEspaceJeuDansChaineASCII());&#xD;&#xA;&#x9;    "/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="test_unNouveauVaisseauEstCorrectementPositionneDansEspaceJeu"
+        ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="spaceinvaders.positionnerUnNouveauVaisseau(1,1,7,9);&#xD;&#xA;&#x9;&#x9;assertEquals(&quot;&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; +&#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;.......V.......\n&quot; , spaceinvaders.recupererEspaceJeuDansChaineASCII());&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException"
+        ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="try {&#xD;&#xA;&#x9;&#x9;&#x9;spaceinvaders.positionnerUnNouveauVaisseau(1,1,15,9);&#xD;&#xA;&#x9;&#x9;&#x9;fail(&quot;Position trop à droite : devrait déclencher une exception HorsEspaceJeuException&quot;);&#xD;&#xA;&#x9;&#x9;} catch (final HorsEspaceJeuException e) {&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;try {&#xD;&#xA;&#x9;&#x9;&#x9;spaceinvaders.positionnerUnNouveauVaisseau(1,1,-1,9);&#xD;&#xA;&#x9;&#x9;&#x9;fail(&quot;Position trop à gauche : devrait déclencher une exception HorsEspaceJeuException&quot;);&#xD;&#xA;&#x9;&#x9;} catch (final HorsEspaceJeuException e) {&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;try {&#xD;&#xA;&#x9;&#x9;&#x9;spaceinvaders.positionnerUnNouveauVaisseau(1,1,14,10);&#xD;&#xA;&#x9;&#x9;&#x9;fail(&quot;Position trop en bas : devrait déclencher une exception HorsEspaceJeuException&quot;);&#xD;&#xA;&#x9;&#x9;} catch (final HorsEspaceJeuException e) {&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;try {&#xD;&#xA;&#x9;&#x9;&#x9;spaceinvaders.positionnerUnNouveauVaisseau(1,1,14,-1);&#xD;&#xA;&#x9;&#x9;&#x9;fail(&quot;Position trop à haut : devrait déclencher une exception HorsEspaceJeuException&quot;);&#xD;&#xA;&#x9;&#x9;} catch (final HorsEspaceJeuException e) {&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="test_unNouveauVaisseauAvecDimensionEstCorrectementPositionneDansEspaceJeu"
+        ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="spaceinvaders.positionnerUnNouveauVaisseau(3,2,7,9);&#xD;&#xA;&#x9;&#x9;assertEquals(&quot;&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; +&#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;.......VVV.....\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;.......VVV.....\n&quot; , spaceinvaders.recupererEspaceJeuDansChaineASCII());&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="test_UnNouveauVaisseauPositionneDansEspaceJeuMaisAvecDimensionTropGrande_DoitLeverUneExceptionDeDebordement"
+        ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="try {&#xD;&#xA;&#x9;&#x9;&#x9;spaceinvaders.positionnerUnNouveauVaisseau(9,2,7,9);&#xD;&#xA;&#x9;&#x9;&#x9;fail(&quot;Dépassement du vaisseau à droite en raison de sa longueur trop importante : devrait déclencher une exception DebordementEspaceJeuException&quot;);&#xD;&#xA;&#x9;&#x9;} catch (final DebordementEspaceJeuException e) {&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;try {&#xD;&#xA;&#x9;&#x9;&#x9;spaceinvaders.positionnerUnNouveauVaisseau(3,4,7,1);&#xD;&#xA;&#x9;&#x9;&#x9;fail(&quot;Dépassement du vaisseau vers le haut en raison de sa hauteur trop importante : devrait déclencher une exception DebordementEspaceJeuException&quot;);&#xD;&#xA;&#x9;&#x9;} catch (final DebordementEspaceJeuException e) {&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="VaisseauAvance_DeplacerVaisseauVersLaGauche" ordered="false"
+        lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2),new Position(7,9), 1);&#xD;&#xA;&#x9;&#x9;spaceinvaders.deplacerVaisseauVersLaGauche();&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;&#x9;assertEquals(&quot;&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; +&#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;......VVV......\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;......VVV......\n&quot; , spaceinvaders.recupererEspaceJeuDansChaineASCII());&#xD;&#xA; "/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="VaisseauImmobile_DeplacerVaisseauVersLaGauche" ordered="false"
+        lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="spaceinvaders.positionnerUnNouveauVaisseau(3,2,0,9);&#xD;&#xA;&#x9;&#x9;spaceinvaders.deplacerVaisseauVersLaGauche();&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;assertEquals(&quot;&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; +&#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;...............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;VVV............\n&quot; + &#xD;&#xA;&#x9;&#x9;&quot;VVV............\n&quot; , spaceinvaders.recupererEspaceJeuDansChaineASCII());&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="test_VaisseauAvance_DeplacerVaisseauVersLaDroite" ordered="false"
+        lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2),new Position(7,9),3);&#xD;&#xA;     spaceinvaders.deplacerVaisseauVersLaDroite();&#xD;&#xA;     assertEquals(&quot;&quot; + &#xD;&#xA;     &quot;...............\n&quot; + &#xD;&#xA;     &quot;...............\n&quot; +&#xD;&#xA;     &quot;...............\n&quot; + &#xD;&#xA;     &quot;...............\n&quot; + &#xD;&#xA;     &quot;...............\n&quot; + &#xD;&#xA;     &quot;...............\n&quot; + &#xD;&#xA;     &quot;...............\n&quot; + &#xD;&#xA;     &quot;...............\n&quot; + &#xD;&#xA;     &quot;..........VVV..\n&quot; + &#xD;&#xA;     &quot;..........VVV..\n&quot; , spaceinvaders.recupererEspaceJeuDansChaineASCII());&#xD;&#xA; "/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="test_VaisseauImmobile_DeplacerVaisseauVersLaDroite" ordered="false"
+        lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2),new Position(12,9), 3);&#xD;&#xA;    spaceinvaders.deplacerVaisseauVersLaDroite();&#xD;&#xA;    assertEquals(&quot;&quot; + &#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;...............\n&quot; +&#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;............VVV\n&quot; + &#xD;&#xA;    &quot;............VVV\n&quot; , spaceinvaders.recupererEspaceJeuDansChaineASCII());&#xD;&#xA; "/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="test_VaisseauAvancePartiellement_DeplacerVaisseauVersLaDroite"
+        ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2),new Position(10,9),3);&#xD;&#xA;    spaceinvaders.deplacerVaisseauVersLaDroite();&#xD;&#xA;    assertEquals(&quot;&quot; + &#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;...............\n&quot; +&#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;...............\n&quot; + &#xD;&#xA;    &quot;............VVV\n&quot; + &#xD;&#xA;    &quot;............VVV\n&quot; , spaceinvaders.recupererEspaceJeuDansChaineASCII());&#xD;&#xA; "/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spaceinvaders" ordered="false"
+        lowerBound="1" eType="#//SpacesInvaders"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpaceInvaderTest_initialisation">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="initialisation"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpaceInvaderTest_test_AuDebut_JeuSpaceInvaderEstVide">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="test_AuDebut_JeuSpaceInvaderEstVide"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpaceInvaderTest_test_unNouveauVaisseauEstCorrectementPositionneDansEspaceJeu">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="test_unNouveauVaisseauEstCorrectementPositionneDansEspaceJeu"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpaceInvaderTest_test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpaceInvaderTest_test_unNouveauVaisseauAvecDimensionEstCorrectementPositionneDansEspaceJeu">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="test_unNouveauVaisseauAvecDimensionEstCorrectementPositionneDansEspaceJeu"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpaceInvaderTest_test_UnNouveauVaisseauPositionneDansEspaceJeuMaisAvecDimensionTropGrande_DoitLeverUneExceptionDeDebordement">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="test_UnNouveauVaisseauPositionneDansEspaceJeuMaisAvecDimensionTropGrande_DoitLeverUneExceptionDeDebordement"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpaceInvaderTest_VaisseauAvance_DeplacerVaisseauVersLaGauche">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="VaisseauAvance_DeplacerVaisseauVersLaGauche"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpaceInvaderTest_VaisseauImmobile_DeplacerVaisseauVersLaGauche">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="VaisseauImmobile_DeplacerVaisseauVersLaGauche"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpaceInvaderTest_test_VaisseauAvance_DeplacerVaisseauVersLaDroite">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="test_VaisseauAvance_DeplacerVaisseauVersLaDroite"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpaceInvaderTest_test_VaisseauImmobile_DeplacerVaisseauVersLaDroite">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="test_VaisseauImmobile_DeplacerVaisseauVersLaDroite"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpaceInvaderTest_test_VaisseauAvancePartiellement_DeplacerVaisseauVersLaDroite">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="test_VaisseauAvancePartiellement_DeplacerVaisseauVersLaDroite"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NewClass1"/>
+</ecore:EPackage>

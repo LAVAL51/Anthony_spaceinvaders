@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated spaceinvaders2 -->
+      <package
+            uri="http:///spaceinvaders2/utils.ecore"
+            class="utils.UtilsPackage"
+            genModel="spaceinvaders2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated spaceinvaders2 -->
+      <package
+            uri="http:///spaceinvaders2/java/lang.ecore"
+            class="jdk.java.lang.LangPackage"
+            genModel="spaceinvaders2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated spaceinvaders2 -->
+      <package
+            uri="http:///spaceinvaders2/spaceinvaders.ecore"
+            class="spaceinvaders.SpaceinvadersPackage"
+            genModel="spaceinvaders2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated spaceinvaders2 -->
+      <package
+            uri="http:///spaceinvaders2/org/junit.ecore"
+            class="org.junit.JunitPackage"
+            genModel="spaceinvaders2.genmodel"/>
+   </extension>
+</plugin>

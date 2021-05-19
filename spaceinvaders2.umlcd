@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_fjnTMKzhEeuBOK6REuM_Zg">
+  <modelElement href="spaceinvaders2.uml#_m7rE4KzsEeuBOK6REuM_Zg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_nBRWkKzsEeuBOK6REuM_Zg" sourceAnchor="526.0,232.0" targetAnchor="0.0,183.0" target="_ozb3wKzsEeuBOK6REuM_Zg" source="_nBR9oKzsEeuBOK6REuM_Zg">
+    <modelElement href="spaceinvaders2.uml#_m82JkKzsEeuBOK6REuM_Zg"/>
+    <stereotypes xmi:id="_nBRWkazsEeuBOK6REuM_Zg" name="Reference">
+      <modelElement href="spaceinvaders2.uml#_m82woKzsEeuBOK6REuM_Zg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_nBRWkqzsEeuBOK6REuM_Zg" text="">
+      <visualProperties xmi:id="_o5nYQKzsEeuBOK6REuM_Zg" position="-10.0,2.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_nBRWk6zsEeuBOK6REuM_Zg" aggregationKind="NONE" name="">
+      <modelElement href="spaceinvaders2.uml#_m82JkazsEeuBOK6REuM_Zg"/>
+      <visualProperties xmi:id="_o5mKIKzsEeuBOK6REuM_Zg" position="12.0,2.0"/>
+      <visibility xmi:id="_nBRWlKzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_nBRWlazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_nBRWlqzsEeuBOK6REuM_Zg" aggregationKind="NONE" name="vaisseau" navigable="true">
+      <modelElement href="spaceinvaders2.uml#_m8xREazsEeuBOK6REuM_Zg"/>
+      <visualProperties xmi:id="_o5nYQazsEeuBOK6REuM_Zg" position="-69.0,-47.0"/>
+      <visibility xmi:id="_nBRWl6zsEeuBOK6REuM_Zg" label="~"/>
+      <cardinality xmi:id="_nBRWmKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_ozPqgKzsEeuBOK6REuM_Zg" sourceAnchor="14.0,369.0" targetAnchor="286.0,0.0" target="_nn88EKzsEeuBOK6REuM_Zg" source="_ozb3wKzsEeuBOK6REuM_Zg">
+    <modelElement href="spaceinvaders2.uml#_ovZsUKzsEeuBOK6REuM_Zg"/>
+    <stereotypes xmi:id="_ozSt0KzsEeuBOK6REuM_Zg" name="Reference">
+      <modelElement href="spaceinvaders2.uml#_ovbhgKzsEeuBOK6REuM_Zg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_ozSGwKzsEeuBOK6REuM_Zg" text="">
+      <visualProperties xmi:id="_o5omYazsEeuBOK6REuM_Zg" position="-39.0,-11.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_ozSGwazsEeuBOK6REuM_Zg" aggregationKind="NONE" name="">
+      <modelElement href="spaceinvaders2.uml#_ovZsUazsEeuBOK6REuM_Zg"/>
+      <visualProperties xmi:id="_o5omYKzsEeuBOK6REuM_Zg" position="-61.0,-21.0"/>
+      <visibility xmi:id="_ozYNYazsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozYNYKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_ozSGwqzsEeuBOK6REuM_Zg" aggregationKind="NONE" name="origine" navigable="true">
+      <modelElement href="spaceinvaders2.uml#_ovRJcKzsEeuBOK6REuM_Zg"/>
+      <visualProperties xmi:id="_o5pNcKzsEeuBOK6REuM_Zg" position="12.0,-29.0"/>
+      <visibility xmi:id="_ozYNY6zsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_ozYNYqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_ozQRkKzsEeuBOK6REuM_Zg" sourceAnchor="326.0,369.0" targetAnchor="166.0,0.0" target="_n8JqcKzsEeuBOK6REuM_Zg" source="_ozb3wKzsEeuBOK6REuM_Zg">
+    <modelElement href="spaceinvaders2.uml#_ovbhgazsEeuBOK6REuM_Zg"/>
+    <stereotypes xmi:id="_ozSt1KzsEeuBOK6REuM_Zg" name="Reference">
+      <modelElement href="spaceinvaders2.uml#_ovdWsKzsEeuBOK6REuM_Zg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_ozSt0azsEeuBOK6REuM_Zg" text="">
+      <visualProperties xmi:id="_o5qbkKzsEeuBOK6REuM_Zg" position="41.0,2.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_ozSt0qzsEeuBOK6REuM_Zg" aggregationKind="NONE" name="">
+      <modelElement href="spaceinvaders2.uml#_ovbhgqzsEeuBOK6REuM_Zg"/>
+      <visualProperties xmi:id="_o5p0gKzsEeuBOK6REuM_Zg" position="-56.0,-3.0"/>
+      <visibility xmi:id="_ozY0cazsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozY0cKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_ozSt06zsEeuBOK6REuM_Zg" aggregationKind="NONE" name="dimension" navigable="true">
+      <modelElement href="spaceinvaders2.uml#_ovRwgazsEeuBOK6REuM_Zg"/>
+      <visualProperties xmi:id="_o5rCoKzsEeuBOK6REuM_Zg" position="-35.0,-43.0"/>
+      <visibility xmi:id="_ozY0c6zsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_ozY0cqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_0rfq4KzsEeuBOK6REuM_Zg" sourceAnchor="666.0,0.0" targetAnchor="262.0,350.0" target="_nBR9oKzsEeuBOK6REuM_Zg" source="_0rkjYKzsEeuBOK6REuM_Zg">
+    <modelElement href="spaceinvaders2.uml#_0m9JIKzsEeuBOK6REuM_Zg"/>
+    <stereotypes xmi:id="_0rgR86zsEeuBOK6REuM_Zg" name="Reference">
+      <modelElement href="spaceinvaders2.uml#_0m-XQKzsEeuBOK6REuM_Zg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_0rgR8KzsEeuBOK6REuM_Zg" text="">
+      <visualProperties xmi:id="_0w6WYKzsEeuBOK6REuM_Zg" position="2.5,-10.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_0rgR8azsEeuBOK6REuM_Zg" aggregationKind="NONE" name="">
+      <modelElement href="spaceinvaders2.uml#_0m9JIazsEeuBOK6REuM_Zg"/>
+      <visualProperties xmi:id="_0w5vUKzsEeuBOK6REuM_Zg" position="41.5,-36.5"/>
+      <visibility xmi:id="_0riuMazsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_0riuMKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_0rgR8qzsEeuBOK6REuM_Zg" aggregationKind="NONE" name="spaceinvaders" navigable="true">
+      <modelElement href="spaceinvaders2.uml#_0m4QoKzsEeuBOK6REuM_Zg"/>
+      <visualProperties xmi:id="_0w6WYazsEeuBOK6REuM_Zg" position="-90.5,-8.5"/>
+      <visibility xmi:id="_0riuM6zsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_0riuMqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_n8JqcKzsEeuBOK6REuM_Zg" name="Dimension" associationsIn="_ozQRkKzsEeuBOK6REuM_Zg">
+    <modelElement href="spaceinvaders2.uml#_m8pVQKzsEeuBOK6REuM_Zg"/>
+    <visualProperties xmi:id="_n8JqcazsEeuBOK6REuM_Zg" position="2516.0,586.0" size="333.0,145.0"/>
+    <visibility xmi:id="_n8JqcqzsEeuBOK6REuM_Zg" label="+"/>
+    <attributes xmi:id="_n8Jqc6zsEeuBOK6REuM_Zg" name="longueur">
+      <modelElement href="spaceinvaders2.uml#_n4t78KzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_n8JqdKzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_n4ujAKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_n8JqdazsEeuBOK6REuM_Zg" label="~"/>
+      <cardinality xmi:id="_n8JqdqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_n8Jqd6zsEeuBOK6REuM_Zg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_n8JqeKzsEeuBOK6REuM_Zg" name="hauteur">
+      <modelElement href="spaceinvaders2.uml#_n4ujAazsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_n8JqeazsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_n4vKEKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_n8JqeqzsEeuBOK6REuM_Zg" label="~"/>
+      <cardinality xmi:id="_n8Jqe6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_n8JqfKzsEeuBOK6REuM_Zg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_n8JqfazsEeuBOK6REuM_Zg" name="Dimension">
+      <modelElement href="spaceinvaders2.uml#_n4ocYKzsEeuBOK6REuM_Zg"/>
+      <keywords xmi:id="_n8JqfqzsEeuBOK6REuM_Zg" keyword="create"/>
+      <visibility xmi:id="_n8Jqf6zsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_n8JqgKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_n8JqgazsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_n4pqgazsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_n8JqgqzsEeuBOK6REuM_Zg" name="Dimension">
+          <modelElement href="spaceinvaders2.uml#_m8pVQKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_n8Jqg6zsEeuBOK6REuM_Zg" name="longueur">
+        <modelElement href="spaceinvaders2.uml#_n4pDcKzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_n8JqhKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_n8JqhazsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_n8JqhqzsEeuBOK6REuM_Zg" name="hauteur">
+        <modelElement href="spaceinvaders2.uml#_n4pDcazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_n8Jqh6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_n8JqiKzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_n8JqiazsEeuBOK6REuM_Zg" name="longueur">
+      <modelElement href="spaceinvaders2.uml#_n4pqgqzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_n8JqiqzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_n8Jqi6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_n8JqjKzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_n4qRkKzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_n8JqjazsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_n8JqjqzsEeuBOK6REuM_Zg" name="hauteur">
+      <modelElement href="spaceinvaders2.uml#_n4qRkazsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_n8Jqj6zsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_n8JqkKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_n8JqkazsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_n4qRkqzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_n8JqkqzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_yYoQYKzsEeuBOK6REuM_Zg" name="HorsEspaceJeuException">
+    <modelElement href="spaceinvaders2.uml#_m8NQYazsEeuBOK6REuM_Zg"/>
+    <visualProperties xmi:id="_yYoQYazsEeuBOK6REuM_Zg" position="2425.0,769.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_yYoQYqzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+      <modelElement href="spaceinvaders2.uml#_yUbs4KzsEeuBOK6REuM_Zg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_yYoQY6zsEeuBOK6REuM_Zg" name="Annotations">
+      <modelElement href="spaceinvaders2.uml#_yUdiEKzsEeuBOK6REuM_Zg"/>
+    </stereotypes>
+    <visibility xmi:id="_yYoQZKzsEeuBOK6REuM_Zg" label="+"/>
+    <operations xmi:id="_yYoQZazsEeuBOK6REuM_Zg" name="HorsEspaceJeuException">
+      <modelElement href="spaceinvaders2.uml#_yUcT8KzsEeuBOK6REuM_Zg"/>
+      <keywords xmi:id="_yYoQZqzsEeuBOK6REuM_Zg" keyword="create"/>
+      <stereotypes xmi:id="_yYoQZ6zsEeuBOK6REuM_Zg" name="StyledElement">
+        <modelElement href="spaceinvaders2.uml#_yUc7AazsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_yYoQaKzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_yYoQaazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_yYoQaqzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_yUc7AKzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_yYoQa6zsEeuBOK6REuM_Zg" name="HorsEspaceJeuException">
+          <modelElement href="spaceinvaders2.uml#_m8NQYazsEeuBOK6REuM_Zg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_yYoQbKzsEeuBOK6REuM_Zg" name="message">
+        <modelElement href="spaceinvaders2.uml#_yUcT8azsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_yYoQbazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_yYoQbqzsEeuBOK6REuM_Zg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_xRV4MKzsEeuBOK6REuM_Zg" name="DebordementEspaceJeuException">
+    <modelElement href="spaceinvaders2.uml#_m8K0IKzsEeuBOK6REuM_Zg"/>
+    <visualProperties xmi:id="_xRV4MazsEeuBOK6REuM_Zg" position="1876.0,772.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_xRV4MqzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+      <modelElement href="spaceinvaders2.uml#_xNJUsKzsEeuBOK6REuM_Zg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_xRV4M6zsEeuBOK6REuM_Zg" name="Annotations">
+      <modelElement href="spaceinvaders2.uml#_xNLw8KzsEeuBOK6REuM_Zg"/>
+    </stereotypes>
+    <visibility xmi:id="_xRV4NKzsEeuBOK6REuM_Zg" label="+"/>
+    <operations xmi:id="_xRV4NazsEeuBOK6REuM_Zg" name="DebordementEspaceJeuException">
+      <modelElement href="spaceinvaders2.uml#_xNJ7wKzsEeuBOK6REuM_Zg"/>
+      <keywords xmi:id="_xRV4NqzsEeuBOK6REuM_Zg" keyword="create"/>
+      <stereotypes xmi:id="_xRV4N6zsEeuBOK6REuM_Zg" name="StyledElement">
+        <modelElement href="spaceinvaders2.uml#_xNLJ4KzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_xRV4OKzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_xRV4OazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_xRV4OqzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_xNKi0qzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_xRV4O6zsEeuBOK6REuM_Zg" name="DebordementEspaceJeuException">
+          <modelElement href="spaceinvaders2.uml#_m8K0IKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_xRV4PKzsEeuBOK6REuM_Zg" name="message">
+        <modelElement href="spaceinvaders2.uml#_xNJ7wazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_xRV4PazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_xRV4PqzsEeuBOK6REuM_Zg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_nn88EKzsEeuBOK6REuM_Zg" name="Position" associationsIn="_ozPqgKzsEeuBOK6REuM_Zg">
+    <modelElement href="spaceinvaders2.uml#_m8rKcKzsEeuBOK6REuM_Zg"/>
+    <visualProperties xmi:id="_nn88EazsEeuBOK6REuM_Zg" position="2084.0,579.0" size="293.0,178.0"/>
+    <visibility xmi:id="_nn88EqzsEeuBOK6REuM_Zg" label="+"/>
+    <attributes xmi:id="_nn88E6zsEeuBOK6REuM_Zg" name="x">
+      <modelElement href="spaceinvaders2.uml#_nkNEgKzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_nn88FKzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_nkNrkKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_nn88FazsEeuBOK6REuM_Zg" label="~"/>
+      <cardinality xmi:id="_nn88FqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_nn88F6zsEeuBOK6REuM_Zg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_nn88GKzsEeuBOK6REuM_Zg" name="y">
+      <modelElement href="spaceinvaders2.uml#_nkNrkazsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_nn88GazsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_nkOSoKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_nn88GqzsEeuBOK6REuM_Zg" label="~"/>
+      <cardinality xmi:id="_nn88G6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_nn88HKzsEeuBOK6REuM_Zg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_nn88HazsEeuBOK6REuM_Zg" name="Position">
+      <modelElement href="spaceinvaders2.uml#_nkG94KzsEeuBOK6REuM_Zg"/>
+      <keywords xmi:id="_nn88HqzsEeuBOK6REuM_Zg" keyword="create"/>
+      <visibility xmi:id="_nn88H6zsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_nn88IKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_nn88IazsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_nkHk9KzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_nn88IqzsEeuBOK6REuM_Zg" name="Position">
+          <modelElement href="spaceinvaders2.uml#_m8rKcKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_nn88I6zsEeuBOK6REuM_Zg" name="x">
+        <modelElement href="spaceinvaders2.uml#_nkHk8KzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nn88JKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nn88JazsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_nn88JqzsEeuBOK6REuM_Zg" name="y">
+        <modelElement href="spaceinvaders2.uml#_nkHk8azsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nn88J6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nn88KKzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_nn9jIKzsEeuBOK6REuM_Zg" name="abscisse">
+      <modelElement href="spaceinvaders2.uml#_nkHk9azsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nn9jIazsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_nn9jIqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_nn9jI6zsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_nkIMAKzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_nn9jJKzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_nn9jJazsEeuBOK6REuM_Zg" name="ordonnee">
+      <modelElement href="spaceinvaders2.uml#_nkIMAazsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nn9jJqzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_nn9jJ6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_nn9jKKzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_nkIzEKzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_nn9jKazsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_nn9jKqzsEeuBOK6REuM_Zg" name="changerAbscisse">
+      <modelElement href="spaceinvaders2.uml#_nkIzEazsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nn9jK6zsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_nn9jLKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_nn9jLazsEeuBOK6REuM_Zg" name="nouvelleAbscisse">
+        <modelElement href="spaceinvaders2.uml#_nkJaIKzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nn9jLqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nn9jL6zsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_nn9jMKzsEeuBOK6REuM_Zg" name="changerOrdonnee">
+      <modelElement href="spaceinvaders2.uml#_nkKoQKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nn9jMazsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_nn9jMqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_nn9jM6zsEeuBOK6REuM_Zg" name="nouvelleOrdonnee">
+        <modelElement href="spaceinvaders2.uml#_nkLPUKzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nn9jNKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nn9jNazsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_dp7pYK0QEeuBOK6REuM_Zg" name="NewClass1">
+    <modelElement href="spaceinvaders2.uml#_dp4mEK0QEeuBOK6REuM_Zg"/>
+    <visualProperties xmi:id="_dp7pYa0QEeuBOK6REuM_Zg" position="2820.0,1432.0" size="622.0,128.0"/>
+    <visibility xmi:id="_dp7pYq0QEeuBOK6REuM_Zg" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_ozb3wKzsEeuBOK6REuM_Zg" name="Vaisseau" associationsIn="_nBRWkKzsEeuBOK6REuM_Zg" associationsOut="_ozPqgKzsEeuBOK6REuM_Zg _ozQRkKzsEeuBOK6REuM_Zg">
+    <modelElement href="spaceinvaders2.uml#_m8m5AKzsEeuBOK6REuM_Zg"/>
+    <visualProperties xmi:id="_ozb3wazsEeuBOK6REuM_Zg" position="2356.0,177.0" size="390.0,369.0"/>
+    <visibility xmi:id="_ozb3wqzsEeuBOK6REuM_Zg" label="+"/>
+    <attributes xmi:id="_ozb3w6zsEeuBOK6REuM_Zg" name="origine">
+      <modelElement href="spaceinvaders2.uml#_ovRJcKzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_ozb3xKzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_ovRwgKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_ozb3xazsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_ozb3xqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_ozb3x6zsEeuBOK6REuM_Zg" name="Position">
+        <modelElement href="spaceinvaders2.uml#_m8rKcKzsEeuBOK6REuM_Zg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_ozce0KzsEeuBOK6REuM_Zg" name="dimension">
+      <modelElement href="spaceinvaders2.uml#_ovRwgazsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_ozce0azsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_ovS-oKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_ozce0qzsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_ozce06zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_ozce1KzsEeuBOK6REuM_Zg" name="Dimension">
+        <modelElement href="spaceinvaders2.uml#_m8pVQKzsEeuBOK6REuM_Zg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_ozce1azsEeuBOK6REuM_Zg" name="vitesse">
+      <modelElement href="spaceinvaders2.uml#_ovS-oazsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_ozce1qzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_ovTlsKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_ozce16zsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_ozce2KzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_ozce2azsEeuBOK6REuM_Zg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_ozce2qzsEeuBOK6REuM_Zg" name="Vaisseau">
+      <modelElement href="spaceinvaders2.uml#_ou-1kKzsEeuBOK6REuM_Zg"/>
+      <keywords xmi:id="_ozce26zsEeuBOK6REuM_Zg" keyword="create"/>
+      <visibility xmi:id="_ozce3KzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozce3azsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ozce3qzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_ou_cpKzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_ozce36zsEeuBOK6REuM_Zg" name="Vaisseau">
+          <modelElement href="spaceinvaders2.uml#_m8m5AKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_ozce4KzsEeuBOK6REuM_Zg" name="longueur">
+        <modelElement href="spaceinvaders2.uml#_ou_coKzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozce4azsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozce4qzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ozce46zsEeuBOK6REuM_Zg" name="hauteur">
+        <modelElement href="spaceinvaders2.uml#_ou_coazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozce5KzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozce5azsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_ozce5qzsEeuBOK6REuM_Zg" name="Vaisseau">
+      <modelElement href="spaceinvaders2.uml#_ovADsKzsEeuBOK6REuM_Zg"/>
+      <keywords xmi:id="_ozce56zsEeuBOK6REuM_Zg" keyword="create"/>
+      <visibility xmi:id="_ozce6KzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozce6azsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ozce6qzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_ovAqxazsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_ozce66zsEeuBOK6REuM_Zg" name="Vaisseau">
+          <modelElement href="spaceinvaders2.uml#_m8m5AKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_ozce7KzsEeuBOK6REuM_Zg" name="longueur">
+        <modelElement href="spaceinvaders2.uml#_ovADsazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozce7azsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozce7qzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ozce76zsEeuBOK6REuM_Zg" name="hauteur">
+        <modelElement href="spaceinvaders2.uml#_ovAqwKzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozce8KzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozce8azsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ozce8qzsEeuBOK6REuM_Zg" name="x">
+        <modelElement href="spaceinvaders2.uml#_ovAqwazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozce86zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozce9KzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ozce9azsEeuBOK6REuM_Zg" name="y">
+        <modelElement href="spaceinvaders2.uml#_ovAqwqzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozce9qzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozce96zsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_ozce-KzsEeuBOK6REuM_Zg" name="occupeLaPosition">
+      <modelElement href="spaceinvaders2.uml#_ovCf8KzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_ozce-azsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozce-qzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ozce-6zsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_ovCf86zsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_ozce_KzsEeuBOK6REuM_Zg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_ozce_azsEeuBOK6REuM_Zg" name="x">
+        <modelElement href="spaceinvaders2.uml#_ovCf8azsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozce_qzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozce_6zsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ozcfAKzsEeuBOK6REuM_Zg" name="y">
+        <modelElement href="spaceinvaders2.uml#_ovCf8qzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozcfAazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozcfAqzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_ozcfA6zsEeuBOK6REuM_Zg" name="estOrdonneeCouverte">
+      <modelElement href="spaceinvaders2.uml#_ovDHAKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_ozcfBKzsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_ozcfBazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ozcfBqzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_ovDuEKzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_ozcfB6zsEeuBOK6REuM_Zg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_ozcfCKzsEeuBOK6REuM_Zg" name="y">
+        <modelElement href="spaceinvaders2.uml#_ovDHAazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozcfCazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozcfCqzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_ozcfC6zsEeuBOK6REuM_Zg" name="estAbscisseCouverte">
+      <modelElement href="spaceinvaders2.uml#_ovEVIKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_ozcfDKzsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_ozcfDazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ozcfDqzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_ovEVIqzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_ozcfD6zsEeuBOK6REuM_Zg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_ozcfEKzsEeuBOK6REuM_Zg" name="x">
+        <modelElement href="spaceinvaders2.uml#_ovEVIazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozcfEazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozcfEqzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_ozcfE6zsEeuBOK6REuM_Zg" name="ordonneeLaPlusBasse">
+      <modelElement href="spaceinvaders2.uml#_ovE8MKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_ozcfFKzsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_ozcfFazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ozcfFqzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_ovE8MazsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_ozcfF6zsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_ozcfGKzsEeuBOK6REuM_Zg" name="ordonneeLaPlusHaute">
+      <modelElement href="spaceinvaders2.uml#_ovFjQKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_ozcfGazsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozcfGqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ozcfG6zsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_ovFjQazsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_ozcfHKzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_ozcfHazsEeuBOK6REuM_Zg" name="abscisseLaPlusADroite">
+      <modelElement href="spaceinvaders2.uml#_ovGKUKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_ozcfHqzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozcfH6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ozcfIKzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_ovGKUazsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_ozcfIazsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_ozcfIqzsEeuBOK6REuM_Zg" name="abscisseLaPlusAGauche">
+      <modelElement href="spaceinvaders2.uml#_ovGKUqzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_ozcfI6zsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozcfJKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ozcfJazsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_ovGxYKzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_ozcfJqzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_ozcfJ6zsEeuBOK6REuM_Zg" name="seDeplacerVersLaDroite">
+      <modelElement href="spaceinvaders2.uml#_ovGxYazsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_ozcfKKzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozcfKazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_ozcfKqzsEeuBOK6REuM_Zg" name="seDeplacerVersLaGauche">
+      <modelElement href="spaceinvaders2.uml#_ovHYcKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_ozcfK6zsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozcfLKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_ozcfLazsEeuBOK6REuM_Zg" name="positionner">
+      <modelElement href="spaceinvaders2.uml#_ovHYcazsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_ozcfLqzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozcfL6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_ozcfMKzsEeuBOK6REuM_Zg" name="x">
+        <modelElement href="spaceinvaders2.uml#_ovHYcqzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozcfMazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozcfMqzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ozcfM6zsEeuBOK6REuM_Zg" name="y">
+        <modelElement href="spaceinvaders2.uml#_ovH_gKzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozcfNKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozcfNazsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_ozcfNqzsEeuBOK6REuM_Zg" name="longueur">
+      <modelElement href="spaceinvaders2.uml#_ovH_gazsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_ozcfN6zsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozcfOKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ozcfOazsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_ovImkKzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_ozcfOqzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_ozcfO6zsEeuBOK6REuM_Zg" name="Vaisseau">
+      <modelElement href="spaceinvaders2.uml#_ovOGIKzsEeuBOK6REuM_Zg"/>
+      <keywords xmi:id="_ozcfPKzsEeuBOK6REuM_Zg" keyword="create"/>
+      <visibility xmi:id="_ozcfPazsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozcfPqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ozcfP6zsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_ovOtMazsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_ozcfQKzsEeuBOK6REuM_Zg" name="Vaisseau">
+          <modelElement href="spaceinvaders2.uml#_m8m5AKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_ozcfQazsEeuBOK6REuM_Zg" name="dimension">
+        <modelElement href="spaceinvaders2.uml#_ovOGIazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozcfQqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozcfQ6zsEeuBOK6REuM_Zg" name="Dimension">
+          <modelElement href="spaceinvaders2.uml#_m8pVQKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ozcfRKzsEeuBOK6REuM_Zg" name="positionOrigine">
+        <modelElement href="spaceinvaders2.uml#_ovOGIqzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozcfRazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozcfRqzsEeuBOK6REuM_Zg" name="Position">
+          <modelElement href="spaceinvaders2.uml#_m8rKcKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ozcfR6zsEeuBOK6REuM_Zg" name="vitesse">
+        <modelElement href="spaceinvaders2.uml#_ovOGI6zsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozcfSKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozcfSazsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_ozcfSqzsEeuBOK6REuM_Zg" name="Vaisseau">
+      <modelElement href="spaceinvaders2.uml#_ovOtMqzsEeuBOK6REuM_Zg"/>
+      <keywords xmi:id="_ozcfS6zsEeuBOK6REuM_Zg" keyword="create"/>
+      <visibility xmi:id="_ozcfTKzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_ozcfTazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_ozcfTqzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_ovPURKzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_ozcfT6zsEeuBOK6REuM_Zg" name="Vaisseau">
+          <modelElement href="spaceinvaders2.uml#_m8m5AKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_ozcfUKzsEeuBOK6REuM_Zg" name="dimension">
+        <modelElement href="spaceinvaders2.uml#_ovPUQKzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozcfUazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozcfUqzsEeuBOK6REuM_Zg" name="Dimension">
+          <modelElement href="spaceinvaders2.uml#_m8pVQKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ozcfU6zsEeuBOK6REuM_Zg" name="positionOrigine">
+        <modelElement href="spaceinvaders2.uml#_ovPUQazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_ozcfVKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_ozcfVazsEeuBOK6REuM_Zg" name="Position">
+          <modelElement href="spaceinvaders2.uml#_m8rKcKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_nBR9oKzsEeuBOK6REuM_Zg" name="SpacesInvaders" associationsIn="_0rfq4KzsEeuBOK6REuM_Zg" associationsOut="_nBRWkKzsEeuBOK6REuM_Zg">
+    <modelElement href="spaceinvaders2.uml#_m7znwKzsEeuBOK6REuM_Zg"/>
+    <visualProperties xmi:id="_nBR9oazsEeuBOK6REuM_Zg" position="1744.0,128.0" size="525.0,350.0"/>
+    <visibility xmi:id="_nBR9oqzsEeuBOK6REuM_Zg" label="+"/>
+    <attributes xmi:id="_nBR9o6zsEeuBOK6REuM_Zg" defaultValue="'\n'" name="MARQUE_FIN_LIGNE" staticAttribute="true">
+      <modelElement href="spaceinvaders2.uml#_m8uNwKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nBR9pKzsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_nBR9pazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_nBR9pqzsEeuBOK6REuM_Zg" name="char">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_nBR9p6zsEeuBOK6REuM_Zg" defaultValue="'.'" name="MARQUE_VIDE" staticAttribute="true">
+      <modelElement href="spaceinvaders2.uml#_m8u00KzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nBR9qKzsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_nBR9qazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_nBR9qqzsEeuBOK6REuM_Zg" name="char">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_nBR9q6zsEeuBOK6REuM_Zg" defaultValue="'V'" name="MARQUE_VAISSEAU" staticAttribute="true">
+      <modelElement href="spaceinvaders2.uml#_m8vb4KzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nBR9rKzsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_nBR9razsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_nBR9rqzsEeuBOK6REuM_Zg" name="char">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_nBR9r6zsEeuBOK6REuM_Zg" name="longueur">
+      <modelElement href="spaceinvaders2.uml#_m8wC8KzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_nBR9sKzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_m8wqAKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_nBR9sazsEeuBOK6REuM_Zg" label="~"/>
+      <cardinality xmi:id="_nBR9sqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_nBR9s6zsEeuBOK6REuM_Zg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_nBR9tKzsEeuBOK6REuM_Zg" name="hauteur">
+      <modelElement href="spaceinvaders2.uml#_m8wqAazsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_nBR9tazsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_m8xREKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_nBR9tqzsEeuBOK6REuM_Zg" label="~"/>
+      <cardinality xmi:id="_nBR9t6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_nBR9uKzsEeuBOK6REuM_Zg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_nBR9uazsEeuBOK6REuM_Zg" name="vaisseau">
+      <modelElement href="spaceinvaders2.uml#_m8xREazsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_nBR9uqzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_m8x4IKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_nBR9u6zsEeuBOK6REuM_Zg" label="~"/>
+      <cardinality xmi:id="_nBR9vKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_nBR9vazsEeuBOK6REuM_Zg" name="Vaisseau">
+        <modelElement href="spaceinvaders2.uml#_m8m5AKzsEeuBOK6REuM_Zg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_nBR9vqzsEeuBOK6REuM_Zg" name="SpacesInvaders">
+      <modelElement href="spaceinvaders2.uml#_m72rEKzsEeuBOK6REuM_Zg"/>
+      <keywords xmi:id="_nBR9v6zsEeuBOK6REuM_Zg" keyword="create"/>
+      <visibility xmi:id="_nBR9wKzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_nBR9wazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_nBR9wqzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_m73SI6zsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_nBR9w6zsEeuBOK6REuM_Zg" name="SpacesInvaders">
+          <modelElement href="spaceinvaders2.uml#_m7znwKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_nBR9xKzsEeuBOK6REuM_Zg" name="longueur">
+        <modelElement href="spaceinvaders2.uml#_m72rEazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR9xazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR9xqzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_nBR9x6zsEeuBOK6REuM_Zg" name="hauteur">
+        <modelElement href="spaceinvaders2.uml#_m73SIKzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR9yKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR9yazsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_nBR9yqzsEeuBOK6REuM_Zg" name="recupererEspaceJeuDansChaineASCII">
+      <modelElement href="spaceinvaders2.uml#_m735MKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nBR9y6zsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_nBR9zKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_nBR9zazsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_m735MazsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_nBR9zqzsEeuBOK6REuM_Zg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_nBR9z6zsEeuBOK6REuM_Zg" name="recupererMarqueDeLaPosition">
+      <modelElement href="spaceinvaders2.uml#_m75HUKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nBR90KzsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_nBR90azsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_nBR90qzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_m75uYKzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_nBR906zsEeuBOK6REuM_Zg" name="char">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_nBR916zsEeuBOK6REuM_Zg" name="y">
+        <modelElement href="spaceinvaders2.uml#_m75HUqzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR92KzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR92azsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_nBR92qzsEeuBOK6REuM_Zg" name="aUnVaisseauQuiOccupeLaPosition">
+      <modelElement href="spaceinvaders2.uml#_m76VcKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nBR926zsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_nBR93KzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_nBR93azsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_m76Vc6zsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_nBR93qzsEeuBOK6REuM_Zg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_nBR936zsEeuBOK6REuM_Zg" name="x">
+        <modelElement href="spaceinvaders2.uml#_m76VcazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR94KzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR94azsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_nBR94qzsEeuBOK6REuM_Zg" name="y">
+        <modelElement href="spaceinvaders2.uml#_m76VcqzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR946zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR95KzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_nBR95azsEeuBOK6REuM_Zg" name="aUnVaisseau">
+      <modelElement href="spaceinvaders2.uml#_m768gKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nBR95qzsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_nBR956zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_nBR96KzsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_m768gazsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_nBR96azsEeuBOK6REuM_Zg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_nBR96qzsEeuBOK6REuM_Zg" name="estDansEspaceJeu">
+      <modelElement href="spaceinvaders2.uml#_m77jkKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nBR966zsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_nBR97KzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_nBR97azsEeuBOK6REuM_Zg">
+        <modelElement href="spaceinvaders2.uml#_m78KoKzsEeuBOK6REuM_Zg"/>
+        <type xmi:id="_nBR97qzsEeuBOK6REuM_Zg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_nBR976zsEeuBOK6REuM_Zg" name="x">
+        <modelElement href="spaceinvaders2.uml#_m77jkazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR98KzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR98azsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_nBR98qzsEeuBOK6REuM_Zg" name="y">
+        <modelElement href="spaceinvaders2.uml#_m77jkqzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR986zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR99KzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_nBR99azsEeuBOK6REuM_Zg" name="deplacerVaisseauVersLaDroite">
+      <modelElement href="spaceinvaders2.uml#_m78KoazsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nBR99qzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_nBR996zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_nBR9-KzsEeuBOK6REuM_Zg" name="deplacerVaisseauVersLaGauche">
+      <modelElement href="spaceinvaders2.uml#_m78xsKzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nBR9-azsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_nBR9-qzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_nBR9-6zsEeuBOK6REuM_Zg" name="positionnerUnNouveauVaisseau">
+      <modelElement href="spaceinvaders2.uml#_m78xsazsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nBR9_KzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_nBR9_azsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_nBR9_qzsEeuBOK6REuM_Zg" name="longueur">
+        <modelElement href="spaceinvaders2.uml#_m79YwKzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR9_6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR-AKzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_nBR-AazsEeuBOK6REuM_Zg" name="hauteur">
+        <modelElement href="spaceinvaders2.uml#_m79YwazsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR-AqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR-A6zsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_nBR-BKzsEeuBOK6REuM_Zg" name="x">
+        <modelElement href="spaceinvaders2.uml#_m79YwqzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR-BazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR-BqzsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_nBR-B6zsEeuBOK6REuM_Zg" name="y">
+        <modelElement href="spaceinvaders2.uml#_m79Yw6zsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR-CKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR-CazsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_nBR-CqzsEeuBOK6REuM_Zg" name="positionnerUnNouveauVaisseau">
+      <modelElement href="spaceinvaders2.uml#_m8sYkazsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_nBR-C6zsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_nBR-DKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_nBR-DazsEeuBOK6REuM_Zg" name="dimension">
+        <modelElement href="spaceinvaders2.uml#_m8sYkqzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR-DqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR-D6zsEeuBOK6REuM_Zg" name="Dimension">
+          <modelElement href="spaceinvaders2.uml#_m8pVQKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_nBR-EKzsEeuBOK6REuM_Zg" name="position">
+        <modelElement href="spaceinvaders2.uml#_m8sYk6zsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR-EazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR-EqzsEeuBOK6REuM_Zg" name="Position">
+          <modelElement href="spaceinvaders2.uml#_m8rKcKzsEeuBOK6REuM_Zg"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_nBR-E6zsEeuBOK6REuM_Zg" name="vitesse">
+        <modelElement href="spaceinvaders2.uml#_m8sYlKzsEeuBOK6REuM_Zg"/>
+        <cardinality xmi:id="_nBR-FKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+        <type xmi:id="_nBR-FazsEeuBOK6REuM_Zg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_0rkjYKzsEeuBOK6REuM_Zg" name="SpaceInvaderTest" associationsOut="_0rfq4KzsEeuBOK6REuM_Zg">
+    <modelElement href="spaceinvaders2.uml#_0mX6UKzsEeuBOK6REuM_Zg"/>
+    <visualProperties xmi:id="_0rkjYazsEeuBOK6REuM_Zg" position="1340.0,506.0" size="730.0,257.0"/>
+    <visibility xmi:id="_0rkjYqzsEeuBOK6REuM_Zg" label="+"/>
+    <attributes xmi:id="_0rkjY6zsEeuBOK6REuM_Zg" name="spaceinvaders">
+      <modelElement href="spaceinvaders2.uml#_0m4QoKzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_0rkjZKzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_0m43sKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_0rkjZazsEeuBOK6REuM_Zg" label="-"/>
+      <cardinality xmi:id="_0rkjZqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+      <type xmi:id="_0rkjZ6zsEeuBOK6REuM_Zg" name="SpacesInvaders">
+        <modelElement href="spaceinvaders2.uml#_m7znwKzsEeuBOK6REuM_Zg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_0rkjaKzsEeuBOK6REuM_Zg" name="initialisation">
+      <modelElement href="spaceinvaders2.uml#_0maWkKzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_0rkjaazsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_0ma9oKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0rkjaqzsEeuBOK6REuM_Zg" name="Annotations">
+        <modelElement href="spaceinvaders2.uml#_0mbksKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_0rkja6zsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_0rkjbKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_0rkjbazsEeuBOK6REuM_Zg" name="test_AuDebut_JeuSpaceInvaderEstVide">
+      <modelElement href="spaceinvaders2.uml#_0mbksqzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_0rkjbqzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_0mcLwKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0rkjb6zsEeuBOK6REuM_Zg" name="Annotations">
+        <modelElement href="spaceinvaders2.uml#_0mcy0KzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_0rkjcKzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_0rkjcazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_0rkjcqzsEeuBOK6REuM_Zg" name="test_unNouveauVaisseauEstCorrectementPositionneDansEspaceJeu">
+      <modelElement href="spaceinvaders2.uml#_0mcy0qzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_0rkjc6zsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_0mdZ4KzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0rkjdKzsEeuBOK6REuM_Zg" name="Annotations">
+        <modelElement href="spaceinvaders2.uml#_0meA8KzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_0rkjdazsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_0rkjdqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_0rkjd6zsEeuBOK6REuM_Zg" name="test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException">
+      <modelElement href="spaceinvaders2.uml#_0meA8qzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_0rkjeKzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_0meoAKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0rkjeazsEeuBOK6REuM_Zg" name="Annotations">
+        <modelElement href="spaceinvaders2.uml#_0mfPEKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_0rkjeqzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_0rkje6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_0rkjfKzsEeuBOK6REuM_Zg" name="test_unNouveauVaisseauAvecDimensionEstCorrectementPositionneDansEspaceJeu">
+      <modelElement href="spaceinvaders2.uml#_0mfPEqzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_0rkjfazsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_0mf2IKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0rkjfqzsEeuBOK6REuM_Zg" name="Annotations">
+        <modelElement href="spaceinvaders2.uml#_0mgdMKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_0rkjf6zsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_0rkjgKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_0rkjgazsEeuBOK6REuM_Zg" name="test_UnNouveauVaisseauPositionneDansEspaceJeuMaisAvecDimensionTropGrande_DoitLeverUneExceptionDeDebordement">
+      <modelElement href="spaceinvaders2.uml#_0mgdMqzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_0rkjgqzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_0mhEQKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0rkjg6zsEeuBOK6REuM_Zg" name="Annotations">
+        <modelElement href="spaceinvaders2.uml#_0miSYKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_0rkjhKzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_0rkjhazsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_0rkjhqzsEeuBOK6REuM_Zg" name="VaisseauAvance_DeplacerVaisseauVersLaGauche">
+      <modelElement href="spaceinvaders2.uml#_0miSYqzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_0rkjh6zsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_0mi5cKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0rkjiKzsEeuBOK6REuM_Zg" name="Annotations">
+        <modelElement href="spaceinvaders2.uml#_0mjggKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_0rkjiazsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_0rkjiqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_0rkji6zsEeuBOK6REuM_Zg" name="VaisseauImmobile_DeplacerVaisseauVersLaGauche">
+      <modelElement href="spaceinvaders2.uml#_0mjggqzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_0rkjjKzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_0mkHkKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0rkjjazsEeuBOK6REuM_Zg" name="Annotations">
+        <modelElement href="spaceinvaders2.uml#_0mkuoKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_0rkjjqzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_0rkjj6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_0rkjkKzsEeuBOK6REuM_Zg" name="test_VaisseauAvance_DeplacerVaisseauVersLaDroite">
+      <modelElement href="spaceinvaders2.uml#_0mkuoqzsEeuBOK6REuM_Zg"/>
+      <visibility xmi:id="_0rkjkazsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_0rkjkqzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_0rkjk6zsEeuBOK6REuM_Zg" name="test_VaisseauImmobile_DeplacerVaisseauVersLaDroite">
+      <modelElement href="spaceinvaders2.uml#_0mkuo6zsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_0rkjlKzsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_0mlVsKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0rkjlazsEeuBOK6REuM_Zg" name="Annotations">
+        <modelElement href="spaceinvaders2.uml#_0ml8wKzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_0rkjlqzsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_0rkjl6zsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_0rkjmKzsEeuBOK6REuM_Zg" name="test_VaisseauAvancePartiellement_DeplacerVaisseauVersLaDroite">
+      <modelElement href="spaceinvaders2.uml#_0ml8wqzsEeuBOK6REuM_Zg"/>
+      <stereotypes xmi:id="_0rkjmazsEeuBOK6REuM_Zg" name="LegacyStyledElement">
+        <modelElement href="spaceinvaders2.uml#_0mmj0KzsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_0rkjmqzsEeuBOK6REuM_Zg" name="Annotations">
+        <modelElement href="spaceinvaders2.uml#_0mmj0azsEeuBOK6REuM_Zg"/>
+      </stereotypes>
+      <visibility xmi:id="_0rkjm6zsEeuBOK6REuM_Zg" label="+"/>
+      <cardinality xmi:id="_0rkjnKzsEeuBOK6REuM_Zg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
