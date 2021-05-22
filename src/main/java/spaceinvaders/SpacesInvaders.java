@@ -5,15 +5,18 @@ import moteurDuJeu.Commande;
 import moteurDuJeu.Jeu;
 import utils.DebordementEspaceJeuException;
 import utils.HorsEspaceJeuException;
+import utils.MissileException;
 
 public class SpacesInvaders implements Jeu {
     private static final char MARQUE_FIN_LIGNE = '\n';
 	private static final char MARQUE_VIDE = '.';
 	private static final char MARQUE_VAISSEAU = 'V';
+	
 	int longueur;
     int hauteur;
     Vaisseau vaisseau;
-
+    Missile missile;
+    
     public SpacesInvaders(int longueur, int hauteur) {
 	   this.longueur = longueur;
 	   this.hauteur = hauteur;
@@ -31,6 +34,10 @@ public class SpacesInvaders implements Jeu {
 	   public static final char MARQUE_FIN_LIGNE = '\n';
 	   public static final char MARQUE_VIDE = '.';
 	   public static final char MARQUE_VAISSEAU = 'V';
+	public static final char MARQUE_MISSILE = 0;
+	public static final int MISSILE_LONGUEUR = 3;
+	public static final int MISSILE_HAUTEUR = 25;
+	public static final int MISSILE_VITESSE = 10;
    }
     
 
@@ -54,10 +61,19 @@ public class SpacesInvaders implements Jeu {
 	private char recupererMarqueDeLaPosition(int x, int y) {
 		char marque;
 		if (this.aUnVaisseauQuiOccupeLaPosition(x, y))
-		      marque=MARQUE_VAISSEAU;
-		else
-		      marque=MARQUE_VIDE;
+			marque = Constante.MARQUE_VAISSEAU;
+		else if (this.aUnMissileQuiOccupeLaPosition(x, y))
+				marque = Constante.MARQUE_MISSILE;
+		else marque = Constante.MARQUE_VIDE;
 		return marque;
+	}
+
+	private boolean aUnMissileQuiOccupeLaPosition(int x, int y) {
+		return this.aUnMissile() && missile.occupeLaPosition(x, y);
+	}
+
+	public boolean aUnMissile() {
+		return missile!=null;
 	}
 
 	private boolean aUnVaisseauQuiOccupeLaPosition(int x, int y) {
@@ -126,12 +142,16 @@ public class SpacesInvaders implements Jeu {
 	public void evoluer(Commande commande) {
 		   if (commande.gauche) {
 	              deplacerVaisseauVersLaGauche();
-	          }
+	       }
 			
-	         if (commande.droite) {
+	       if (commande.droite) {
 		        deplacerVaisseauVersLaDroite();
-	         }
-
+	       }
+	         
+	       if (commande.espace && !this.aUnMissile()) {
+	             tirerUnMissile(new Dimension(Constante.MISSILE_LONGUEUR, Constante.MISSILE_HAUTEUR),
+	  					Constante.MISSILE_VITESSE);
+	  	   }
 	}
 	
 	@Override
@@ -142,7 +162,19 @@ public class SpacesInvaders implements Jeu {
 
 	public Vaisseau recupererVaisseau() {
 		return vaisseau;
-
 	}
+	
+	public Missile recupererMissille() {
+		return missile;
+	}
+
+    public void tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) {
+    	
+		   if ((vaisseau.hauteur()+ dimensionMissile.hauteur()) > this.hauteur )
+			   throw new MissileException("Pas assez de hauteur libre entre le vaisseau et le haut de l'espace jeu pour tirer le missile");
+							
+		   this.missile = this.vaisseau.tirerUnMissile(dimensionMissile,vitesseMissile);
+    }
+   
 	
 }

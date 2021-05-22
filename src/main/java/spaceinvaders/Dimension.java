@@ -2,7 +2,7 @@ package spaceinvaders;
 
 public class Dimension {
     int longueur;
-	   int hauteur;
+	  int hauteur;
 
 	   public Dimension(int longueur, int hauteur) {
 		   this.longueur = longueur;
