@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="awt" nsURI="http:///spaceinvaders2/java/awt.ecore" nsPrefix="spaceinvaders2.java.awt">
+  <eClassifiers xsi:type="ecore:EClass" name="Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Graphics"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Color"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Graphics2D"/>
+  <eSubpackages name="event" nsURI="http:///spaceinvaders2/java/awt/event.ecore" nsPrefix="spaceinvaders2.java.awt.event">
+    <eClassifiers xsi:type="ecore:EClass" name="KeyEvent"/>
+    <eClassifiers xsi:type="ecore:EClass" name="KeyListener" abstract="true" interface="true"/>
+  </eSubpackages>
+  <eSubpackages name="image" nsURI="http:///spaceinvaders2/java/awt/image.ecore" nsPrefix="spaceinvaders2.java.awt.image">
+    <eClassifiers xsi:type="ecore:EClass" name="BufferedImage"/>
+  </eSubpackages>
+</ecore:EPackage>

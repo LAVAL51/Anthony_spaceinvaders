@@ -47,14 +47,6 @@ public abstract class Sprite {
 		   return this.origine.abscisse();
 	  }
 
-	public void seDeplacerVersLaDroite() {
-		this.origine.changerAbscisse(this.origine.abscisse() + vitesse);
-	}
-
-	public void seDeplacerVersLaGauche() {
-		this.origine.changerAbscisse(this.origine.abscisse() - vitesse);
-	}
-
 	public void positionner(int x, int y) {
 		   this.origine.changerAbscisse(x);
 		   this.origine.changerOrdonnee(y);
@@ -68,17 +60,46 @@ public abstract class Sprite {
 		
 		if (c.gauche)
 		{
-			this.seDeplacerVersLaGauche();
+			this.deplacerHorizontalementVers(Direction.GAUCHE);
 		}
 	
 		if (c.droite)
 		{
-			this.seDeplacerVersLaDroite();
+			this.deplacerHorizontalementVers(Direction.DROITE);
 		}
 	}
 
 	public int hauteur() {
 		return dimension.hauteur;
 	}
+	
+    public void deplacerHorizontalementVers(Direction direction) {
+		this.origine.changerAbscisse(this.origine.abscisse() + direction.valeur()*vitesse);
+	}
+	
+	public void deplacerVerticalementVers(Direction direction) {
+		this.origine.changerOrdonnee(this.origine.ordonnee() + direction.valeur()*vitesse);
+	}
+	
+    public enum Direction {
+  	  
+	     HAUT (-1),
+	     BAS (1),
+	     GAUCHE (-1),
+	     DROITE (1),
+	  
+	     HAUT_ECRAN(-1),
+	     BAS_ECRAN(1);
+	   
+	     private int valeur;
+	  
+	    private Direction(int valeur) {
+		   this.valeur = valeur;
+	   }
+	
+	   public int valeur() {
+		  return this.valeur;
+	  }
 
+  }
 }

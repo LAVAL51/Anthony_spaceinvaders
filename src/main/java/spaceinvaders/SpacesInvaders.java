@@ -3,6 +3,7 @@ package spaceinvaders;
 
 import moteurDuJeu.Commande;
 import moteurDuJeu.Jeu;
+import spaceinvaders.Sprite.Direction;
 import utils.DebordementEspaceJeuException;
 import utils.HorsEspaceJeuException;
 import utils.MissileException;
@@ -22,23 +23,7 @@ public class SpacesInvaders implements Jeu {
 	   this.hauteur = hauteur;
    }
     
-    public class Constante {
 
-	   public static final int ESPACEJEU_LONGUEUR = 150;
-	   public static final int ESPACEJEU_HAUTEUR = 100;
-	
-	   public static final int VAISSEAU_LONGUEUR = 30;
-	   public static final int VAISSEAU_HAUTEUR = 20;
-	   public static final int VAISSEAU_VITESSE = 5;
-	
-	   public static final char MARQUE_FIN_LIGNE = '\n';
-	   public static final char MARQUE_VIDE = '.';
-	   public static final char MARQUE_VAISSEAU = 'V';
-	public static final char MARQUE_MISSILE = 0;
-	public static final int MISSILE_LONGUEUR = 3;
-	public static final int MISSILE_HAUTEUR = 25;
-	public static final int MISSILE_VITESSE = 10;
-   }
     
 
 	public void initialiserJeu() {
@@ -90,7 +75,7 @@ public class SpacesInvaders implements Jeu {
 	
 	public void deplacerVaisseauVersLaDroite() {
 		if (vaisseau.abscisseLaPlusADroite() < (longueur - 1)) {
-			vaisseau.seDeplacerVersLaDroite();
+			vaisseau.deplacerHorizontalementVers(Direction.DROITE);
 			if (!estDansEspaceJeu(vaisseau.abscisseLaPlusADroite(), vaisseau.ordonneeLaPlusHaute())) {
 				vaisseau.positionner(longueur - vaisseau.longueur(), vaisseau.ordonneeLaPlusHaute());
 			}
@@ -99,7 +84,7 @@ public class SpacesInvaders implements Jeu {
 	
 	public void deplacerVaisseauVersLaGauche() {
 		if (0 < vaisseau.abscisseLaPlusAGauche())
-			vaisseau.seDeplacerVersLaGauche();
+			vaisseau.deplacerHorizontalementVers(Direction.GAUCHE);
 		if (!estDansEspaceJeu(vaisseau.abscisseLaPlusAGauche(), vaisseau.ordonneeLaPlusHaute())) {
 			vaisseau.positionner(0, vaisseau.ordonneeLaPlusHaute());
 		}
@@ -152,7 +137,18 @@ public class SpacesInvaders implements Jeu {
 	             tirerUnMissile(new Dimension(Constante.MISSILE_LONGUEUR, Constante.MISSILE_HAUTEUR),
 	  					Constante.MISSILE_VITESSE);
 	  	   }
+	       if(aUnMissile()) {
+	    	   if(!(missile.ordonneeLaPlusHaute() < 0)) {
+	    		   this.deplacerMissile();
+	    	   }
+	    	   else {
+	    		   this.suprimerMissile();
+	    	   }
+	    	   
+	       }
 	}
+	
+	
 	
 	@Override
 	public boolean etreFini() {
@@ -167,6 +163,10 @@ public class SpacesInvaders implements Jeu {
 	public Missile recupererMissille() {
 		return missile;
 	}
+	
+	public Missile suprimerMissile() {
+		return missile = null;
+	}
 
     public void tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) {
     	
@@ -175,6 +175,11 @@ public class SpacesInvaders implements Jeu {
 							
 		   this.missile = this.vaisseau.tirerUnMissile(dimensionMissile,vitesseMissile);
     }
+
+	public void deplacerMissile() {
+		missile.deplacerVerticalementVers(Direction.HAUT_ECRAN);
+		
+	}
    
 	
 }

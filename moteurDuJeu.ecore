@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="moteurDuJeu" nsURI="http:///spaceinvaders2/moteurDuJeu.ecore"
+    nsPrefix="spaceinvaders2.moteurDuJeu">
+  <eClassifiers xsi:type="ecore:EClass" name="Commande">
+    <eOperations name="Commande" ordered="false" lowerBound="1" eType="#//Commande"/>
+    <eOperations name="Commande" ordered="false" lowerBound="1" eType="#//Commande">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this.bas=commandeACopier.bas;&#xD;&#xA;&#x9;&#x9;this.haut=commandeACopier.haut;&#xD;&#xA;&#x9;&#x9;this.gauche=commandeACopier.gauche;&#xD;&#xA;&#x9;&#x9;this.droite=commandeACopier.droite;&#x9;&#xD;&#xA;&#x9;&#x9;this.espace=commandeACopier.espace;&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="commandeACopier" ordered="false" lowerBound="1" eType="#//Commande"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gauche" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="droite" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="haut" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bas" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="espace" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Commande_Commande">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Commande"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Controleur" eSuperTypes="awt.ecore#//event/KeyListener">
+    <eOperations name="Controleur" ordered="false" lowerBound="1" eType="#//Controleur">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this.commandeEnCours = new Commande();&#xD;&#xA;&#x9;&#x9;this.commandeARetourner = new Commande();&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="getCommande" ordered="false" lowerBound="1" eType="#//Commande">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="Commande aRetourner = this.commandeARetourner;&#xD;&#xA;&#x9;&#x9;this.commandeARetourner = new Commande(this.commandeEnCours);&#xD;&#xA;&#x9;&#x9;return (aRetourner);&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="keyPressed" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="switch (e.getKeyChar()) {&#xD;&#xA;&#x9;&#x9;// si on appuie sur 'q',commande joueur est gauche&#xD;&#xA;&#x9;&#x9;case 'q':&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeEnCours.gauche = true;&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeARetourner.gauche = true;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;// si on appuie sur 'd',commande joueur est droite&#xD;&#xA;&#x9;&#x9;case 'd':&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeEnCours.droite = true;&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeARetourner.droite = true;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;// si on appuie sur 'z',commande joueur est haut&#xD;&#xA;&#x9;&#x9;case 'z':&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeEnCours.haut = true;&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeARetourner.haut = true;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;// si on appuie sur 's',commande joueur est bas&#xD;&#xA;&#x9;&#x9;case 's':&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeEnCours.bas = true;&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeARetourner.bas = true;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;// si on appuie sur 'espace', commande joueur est tirer un missile&#xD;&#xA;&#x9;&#x9;case' ':&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeEnCours.espace = true;&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeARetourner.espace= true;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;}&#x9;&#xD;&#xA;&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="e" ordered="false" lowerBound="1" eType="ecore:EClass awt.ecore#//event/KeyEvent"/>
+    </eOperations>
+    <eOperations name="keyReleased" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="switch (e.getKeyChar()) {&#xD;&#xA;&#x9;&#x9;case 'q':&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeEnCours.gauche = false;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;case 'd':&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeEnCours.droite = false;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;case 'z':&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeEnCours.haut = false;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;case 's':&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeEnCours.bas = false;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;case ' ':&#xD;&#xA;&#x9;&#x9;&#x9;this.commandeEnCours.espace = false;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="e" ordered="false" lowerBound="1" eType="ecore:EClass awt.ecore#//event/KeyEvent"/>
+    </eOperations>
+    <eOperations name="keyTyped" ordered="false" lowerBound="1">
+      <eParameters name="e" ordered="false" lowerBound="1" eType="ecore:EClass awt.ecore#//event/KeyEvent"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commandeEnCours" ordered="false"
+        lowerBound="1" eType="#//Commande"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commandeARetourner" ordered="false"
+        lowerBound="1" eType="#//Commande"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Controleur_Controleur">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Controleur"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Controleur_getCommande">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="getCommande"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Controleur_keyPressed">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="keyPressed"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Controleur_keyReleased">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="keyReleased"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceGraphique">
+    <eOperations name="dessiner" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="this.panel.dessinerJeu();&#x9;&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="InterfaceGraphique" ordered="false" lowerBound="1" eType="#//InterfaceGraphique">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="//creation JFrame&#xD;&#xA;&#x9;&#x9;JFrame f=new JFrame();&#xD;&#xA;&#x9;&#x9;f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;// creation panel&#xD;&#xA;&#x9;&#x9;this.panel=new PanelDessin(x, y,afficheurUtil);&#xD;&#xA;&#x9;&#x9;f.setContentPane(this.panel);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;//ajout du controleur&#xD;&#xA;&#x9;&#x9;Controleur controlleurGraph=new Controleur();&#xD;&#xA;&#x9;&#x9;this.controleur=controlleurGraph;&#xD;&#xA;&#x9;&#x9;this.panel.addKeyListener(controlleurGraph);&#x9;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;//recuperation du focus&#xD;&#xA;&#x9;&#x9;f.pack();&#xD;&#xA;&#x9;&#x9;f.setVisible(true);&#xD;&#xA;&#x9;&#x9;f.getContentPane().setFocusable(true);&#xD;&#xA;&#x9;&#x9;f.getContentPane().requestFocus();&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="afficheurUtil" ordered="false" lowerBound="1" eType="#//DessinJeu"/>
+      <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="panel" ordered="false"
+        lowerBound="1" eType="#//PanelDessin"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controleur" ordered="false"
+        lowerBound="1" eType="#//Controleur" changeable="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PanelDessin" eSuperTypes="swing.ecore#//JPanel">
+    <eOperations name="dessinerJeu" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="// generer la nouvelle image&#xD;&#xA;&#x9;&#x9;this.dessin.dessiner(this.imageSuivante);&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;// inverses les images doublebuffereing&#xD;&#xA;&#x9;&#x9;BufferedImage temp = this.imageEnCours;&#xD;&#xA;&#x9;&#x9;// l'image a dessiner est celle qu'on a construite&#xD;&#xA;&#x9;&#x9;this.imageEnCours = this.imageSuivante;&#xD;&#xA;&#x9;&#x9;// l'ancienne image est videe&#xD;&#xA;&#x9;&#x9;this.imageSuivante = temp;&#xD;&#xA;&#x9;&#x9;this.imageSuivante.getGraphics()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;.fillRect(0, 0, this.width, this.height);&#xD;&#xA;&#x9;&#x9;// met a jour l'image a afficher sur le panel&#xD;&#xA;&#x9;&#x9;this.repaint();&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="PanelDessin" ordered="false" lowerBound="1" eType="#//PanelDessin">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="super();&#xD;&#xA;&#x9;&#x9;this.setPreferredSize(new Dimension(x, y));&#xD;&#xA;&#x9;&#x9;this.width = x;&#xD;&#xA;&#x9;&#x9;this.height = y;&#xD;&#xA;&#x9;&#x9;this.dessin=affiche;&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;// cree l'image buffer et son graphics&#xD;&#xA;&#x9;&#x9;this.imageSuivante = new BufferedImage(width, height,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;BufferedImage.TYPE_INT_RGB);&#xD;&#xA;&#x9;&#x9;this.imageEnCours = new BufferedImage(width, height,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;BufferedImage.TYPE_INT_RGB);&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="affiche" ordered="false" lowerBound="1" eType="#//DessinJeu"/>
+    </eOperations>
+    <eOperations name="paint" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="super.paint(g);&#xD;&#xA;&#x9;&#x9;g.drawImage(this.imageEnCours, 0, 0, getWidth(), getHeight(), 0, 0,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;getWidth(), getHeight(), null);&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="g" ordered="false" lowerBound="1" eType="ecore:EClass awt.ecore#//Graphics"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dessin" ordered="false"
+        lowerBound="1" eType="#//DessinJeu"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imageSuivante" ordered="false"
+        lowerBound="1" eType="ecore:EClass awt.ecore#//image/BufferedImage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imageEnCours" ordered="false"
+        lowerBound="1" eType="ecore:EClass awt.ecore#//image/BufferedImage"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PanelDessin_PanelDessin">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="PanelDessin"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PanelDessin_dessinerJeu">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="dessinerJeu"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PanelDessin_paint">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="paint"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceGraphique_InterfaceGraphique">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="InterfaceGraphique"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceGraphique_dessiner">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="dessiner"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Jeu" abstract="true" interface="true">
+    <eOperations name="etreFini" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="evoluer" ordered="false" lowerBound="1">
+      <eParameters name="commandeUser" ordered="false" lowerBound="1" eType="#//Commande"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MoteurGraphique">
+    <eOperations name="lancerJeu" ordered="false" lowerBound="1" eExceptions="ecore:EClass lang.ecore#//InterruptedException">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="// creation de l'interface graphique&#xD;&#xA;&#x9;&#x9;this.gui = new InterfaceGraphique(this.dessin,width,height);&#xD;&#xA;&#x9;&#x9;Controleur controle = this.gui.getControleur();&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;// boucle de jeu&#xD;&#xA;&#x9;&#x9;while (!this.jeu.etreFini()) {&#xD;&#xA;&#x9;&#x9;&#x9;// demande controle utilisateur&#xD;&#xA;&#x9;&#x9;&#x9;Commande c = controle.getCommande();&#xD;&#xA;&#x9;&#x9;&#x9;// fait evoluer le jeu&#xD;&#xA;&#x9;&#x9;&#x9;this.jeu.evoluer(c);&#xD;&#xA;&#x9;&#x9;&#x9;// affiche le jeu&#xD;&#xA;&#x9;&#x9;&#x9;this.gui.dessiner();&#xD;&#xA;&#x9;&#x9;&#x9;// met en attente&#xD;&#xA;&#x9;&#x9;&#x9;Thread.sleep(100);&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="width" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="MoteurGraphique" ordered="false" lowerBound="1" eType="#//MoteurGraphique">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="// creation du jeu&#xD;&#xA;&#x9;&#x9;this.jeu = pJeu;&#xD;&#xA;&#x9;&#x9;this.dessin = pAffiche;&#xD;&#xA;&#x9;"/>
+      </eAnnotations>
+      <eParameters name="pJeu" ordered="false" lowerBound="1" eType="#//Jeu"/>
+      <eParameters name="pAffiche" ordered="false" lowerBound="1" eType="#//DessinJeu"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jeu" ordered="false" lowerBound="1"
+        eType="#//Jeu"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gui" ordered="false" lowerBound="1"
+        eType="#//InterfaceGraphique"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dessin" ordered="false"
+        lowerBound="1" eType="#//DessinJeu"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MoteurGraphique_MoteurGraphique">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="MoteurGraphique"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MoteurGraphique_lancerJeu">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="lancerJeu"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DessinJeu" abstract="true" interface="true">
+    <eOperations name="dessiner" ordered="false" lowerBound="1">
+      <eParameters name="image" ordered="false" lowerBound="1" eType="ecore:EClass awt.ecore#//image/BufferedImage"/>
+    </eOperations>
+  </eClassifiers>
+</ecore:EPackage>

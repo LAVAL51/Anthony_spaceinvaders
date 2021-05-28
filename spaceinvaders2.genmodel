@@ -47,13 +47,40 @@
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="utils.ecore#//HorsEspaceJeuException_HorsEspaceJeuException"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="utils.ecore#//MissileException"/>
   </genPackages>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Lang" basePackage="jdk.java"
       disposableProviderFactory="true" ecorePackage="lang.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="lang.ecore#//InterruptedException"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="lang.ecore#//Exception"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="lang.ecore#//RuntimeException"/>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Awt" basePackage="jdk.java"
+      disposableProviderFactory="true" ecorePackage="awt.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="awt.ecore#//Dimension"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="awt.ecore#//Graphics"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="awt.ecore#//Color"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="awt.ecore#//Graphics2D"/>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Event" disposableProviderFactory="true"
+        ecorePackage="awt.ecore#//event">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="awt.ecore#//event/KeyEvent"/>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="awt.ecore#//event/KeyListener"/>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Image" disposableProviderFactory="true"
+        ecorePackage="awt.ecore#//image">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="awt.ecore#//image/BufferedImage"/>
+    </nestedGenPackages>
   </genPackages>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Spaceinvaders" disposableProviderFactory="true"
       ecorePackage="spaceinvaders.ecore#/">
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="spaceinvaders.ecore#//Sprite_Direction">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="spaceinvaders.ecore#//Sprite_Direction/HAUT"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="spaceinvaders.ecore#//Sprite_Direction/BAS"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="spaceinvaders.ecore#//Sprite_Direction/GAUCHE"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="spaceinvaders.ecore#//Sprite_Direction/DROITE"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="spaceinvaders.ecore#//Sprite_Direction/HAUT_ECRAN"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="spaceinvaders.ecore#//Sprite_Direction/BAS_ECRAN"/>
+    </genEnums>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpacesInvaders">
       <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
           ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//SpacesInvaders/MARQUE_FIN_LIGNE"/>
@@ -229,6 +256,230 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_test_VaisseauImmobile_DeplacerVaisseauVersLaDroite"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//SpaceInvaderTest_test_VaisseauAvancePartiellement_DeplacerVaisseauVersLaDroite"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//NewClass1"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Constante">
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Constante/ESPACEJEU_LONGUEUR"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Constante/ESPACEJEU_HAUTEUR"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Constante/VAISSEAU_LONGUEUR"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Constante/VAISSEAU_HAUTEUR"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Constante/MARQUE_MISSILE"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Constante/MARQUE_VAISSEAU"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Constante/MARQUE_VIDE"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Constante/MISSILE_LONGUEUR"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Constante/MISSILE_HAUTEUR"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//DessinSpaceInvaders">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//DessinSpaceInvaders/TAILLE_CASE"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference spaceinvaders.ecore#//DessinSpaceInvaders/jeu"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//DessinSpaceInvaders/DessinSpaceInvaders">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//DessinSpaceInvaders/DessinSpaceInvaders/spaceinvader"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//DessinSpaceInvaders/dessiner">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//DessinSpaceInvaders/dessiner/im"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//DessinSpaceInvaders/dessinerUnVaisseau">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//DessinSpaceInvaders/dessinerUnVaisseau/vaisseau"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//DessinSpaceInvaders/dessinerUnVaisseau/im"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//DessinSpaceInvaders/dessinerUnMissile">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//DessinSpaceInvaders/dessinerUnMissile/missile"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//DessinSpaceInvaders/dessinerUnMissile/im"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//DessinSpaceInvaders_DessinSpaceInvaders"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//DessinSpaceInvaders_dessiner"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//DessinSpaceInvaders_dessinerUnVaisseau"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//DessinSpaceInvaders_dessinerUnMissile"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Missile">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Missile/Missile">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Missile/Missile/dimension"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Missile/Missile/origine"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Missile/Missile/vitesse"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="spaceinvaders.ecore#//Sprite">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference spaceinvaders.ecore#//Sprite/origine"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference spaceinvaders.ecore#//Sprite/dimension"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute spaceinvaders.ecore#//Sprite/vitesse"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/Sprite"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/occupeLaPosition">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Sprite/occupeLaPosition/x"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Sprite/occupeLaPosition/y"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/estOrdonneeCouverte">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Sprite/estOrdonneeCouverte/y"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/estAbscisseCouverte">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Sprite/estAbscisseCouverte/x"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/ordonneeLaPlusBasse"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/ordonneeLaPlusHaute"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/abscisseLaPlusADroite"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/abscisseLaPlusAGauche"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/positionner">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Sprite/positionner/x"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Sprite/positionner/y"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/longueur"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/hauteur"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/Sprite.1">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Sprite/Sprite.1/dimension"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Sprite/Sprite.1/origine"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Sprite/Sprite.1/vitesse"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/deplacer">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Sprite/deplacer/c"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/deplacerHorizontalementVers">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Sprite/deplacerHorizontalementVers/direction"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Sprite/deplacerVerticalementVers">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Sprite/deplacerVerticalementVers/direction"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_Sprite"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_Sprite.1"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_occupeLaPosition"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_estOrdonneeCouverte"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_estAbscisseCouverte"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_ordonneeLaPlusBasse"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_ordonneeLaPlusHaute"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_abscisseLaPlusADroite"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_abscisseLaPlusAGauche"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_positionner"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_longueur"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_deplacer"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_hauteur"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_deplacerHorizontalementVers"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Sprite_deplacerVerticalementVers"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Missile_Missile"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Main">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//Main/main">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="spaceinvaders.ecore#//Main/main/args"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//Main_main"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//VaisseauTest">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="spaceinvaders.ecore#//VaisseauTest/test_LongueurMissileSuperieureALongueurVaisseau_UneExceptionEstLevee"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="spaceinvaders.ecore#//VaisseauTest_test_LongueurMissileSuperieureALongueurVaisseau_UneExceptionEstLevee"/>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="MoteurDuJeu" disposableProviderFactory="true"
+      ecorePackage="moteurDuJeu.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//Commande">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute moteurDuJeu.ecore#//Commande/gauche"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute moteurDuJeu.ecore#//Commande/droite"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute moteurDuJeu.ecore#//Commande/haut"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute moteurDuJeu.ecore#//Commande/bas"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute moteurDuJeu.ecore#//Commande/espace"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//Commande/Commande"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//Commande/Commande.1">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//Commande/Commande.1/commandeACopier"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//Commande_Commande"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//Controleur">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference moteurDuJeu.ecore#//Controleur/commandeEnCours"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference moteurDuJeu.ecore#//Controleur/commandeARetourner"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//Controleur/Controleur"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//Controleur/getCommande"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//Controleur/keyPressed">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//Controleur/keyPressed/e"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//Controleur/keyReleased">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//Controleur/keyReleased/e"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//Controleur/keyTyped">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//Controleur/keyTyped/e"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//Controleur_Controleur"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//Controleur_getCommande"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//Controleur_keyPressed"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//Controleur_keyReleased"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//InterfaceGraphique">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference moteurDuJeu.ecore#//InterfaceGraphique/panel"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" notify="false"
+          createChild="false" ecoreFeature="ecore:EReference moteurDuJeu.ecore#//InterfaceGraphique/controleur"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//InterfaceGraphique/dessiner"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//InterfaceGraphique/InterfaceGraphique">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//InterfaceGraphique/InterfaceGraphique/afficheurUtil"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//InterfaceGraphique/InterfaceGraphique/x"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//InterfaceGraphique/InterfaceGraphique/y"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//PanelDessin">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference moteurDuJeu.ecore#//PanelDessin/dessin"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference moteurDuJeu.ecore#//PanelDessin/imageSuivante"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference moteurDuJeu.ecore#//PanelDessin/imageEnCours"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute moteurDuJeu.ecore#//PanelDessin/width"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute moteurDuJeu.ecore#//PanelDessin/height"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//PanelDessin/dessinerJeu"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//PanelDessin/PanelDessin">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//PanelDessin/PanelDessin/x"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//PanelDessin/PanelDessin/y"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//PanelDessin/PanelDessin/affiche"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//PanelDessin/paint">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//PanelDessin/paint/g"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//PanelDessin_PanelDessin"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//PanelDessin_dessinerJeu"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//PanelDessin_paint"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//InterfaceGraphique_InterfaceGraphique"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//InterfaceGraphique_dessiner"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="moteurDuJeu.ecore#//Jeu">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//Jeu/etreFini"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//Jeu/evoluer">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//Jeu/evoluer/commandeUser"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//MoteurGraphique">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference moteurDuJeu.ecore#//MoteurGraphique/jeu"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference moteurDuJeu.ecore#//MoteurGraphique/gui"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference moteurDuJeu.ecore#//MoteurGraphique/dessin"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//MoteurGraphique/lancerJeu">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//MoteurGraphique/lancerJeu/width"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//MoteurGraphique/lancerJeu/height"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//MoteurGraphique/MoteurGraphique">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//MoteurGraphique/MoteurGraphique/pJeu"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//MoteurGraphique/MoteurGraphique/pAffiche"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//MoteurGraphique_MoteurGraphique"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="moteurDuJeu.ecore#//MoteurGraphique_lancerJeu"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="moteurDuJeu.ecore#//DessinJeu">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="moteurDuJeu.ecore#//DessinJeu/dessiner">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="moteurDuJeu.ecore#//DessinJeu/dessiner/image"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Swing" basePackage="jdk.javax"
+      disposableProviderFactory="true" ecorePackage="swing.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="swing.ecore#//JFrame"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="swing.ecore#//JPanel"/>
   </genPackages>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Junit" basePackage="org" disposableProviderFactory="true"
       ecorePackage="junit.ecore#/">
