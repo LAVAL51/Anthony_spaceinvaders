@@ -1,9 +1,9 @@
-package spaceinvaders;
+package fr.unilim.iut.spaceinvaders.model;
 
 
+import fr.unilim.iut.spaceinvaders.model.Sprite.Direction;
 import moteurDuJeu.Commande;
 import moteurDuJeu.Jeu;
-import spaceinvaders.Sprite.Direction;
 import utils.DebordementEspaceJeuException;
 import utils.HorsEspaceJeuException;
 import utils.MissileException;

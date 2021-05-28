@@ -2,6 +2,11 @@ package spaceinvaders;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+
+import fr.unilim.iut.spaceinvaders.model.Dimension;
+import fr.unilim.iut.spaceinvaders.model.Position;
+import fr.unilim.iut.spaceinvaders.model.SpacesInvaders;
+
 import static org.junit.Assert.fail;
 
 import utils.DebordementEspaceJeuException;

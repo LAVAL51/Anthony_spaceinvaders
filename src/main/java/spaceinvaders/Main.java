@@ -1,5 +1,8 @@
 package spaceinvaders;
 
+import fr.unilim.iut.spaceinvaders.model.Constante;
+import fr.unilim.iut.spaceinvaders.model.DessinSpaceInvaders;
+import fr.unilim.iut.spaceinvaders.model.SpacesInvaders;
 import moteurDuJeu.DessinJeu;
 import moteurDuJeu.MoteurGraphique;
 
