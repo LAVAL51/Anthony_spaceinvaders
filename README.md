@@ -12,4 +12,9 @@ Interface graphique :
 
 Diagramme de classe : 
 
-![image](https://user-images.githubusercontent.com/80528503/119951599-68dc3f00-bf9c-11eb-8c07-87fa8ed78559.png)
+![image](https://user-images.githubusercontent.com/80528503/119954391-3849d480-bf9f-11eb-876c-f65365a6a905.png)
+
+![image](https://user-images.githubusercontent.com/80528503/119954464-4b5ca480-bf9f-11eb-8188-f8d1c760edfa.png)
+
+
+![image](https://user-images.githubusercontent.com/80528503/119954577-68917300-bf9f-11eb-9c50-0e466cab364d.png)
